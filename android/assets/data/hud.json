@@ -1,0 +1,110 @@
+{
+   com.badlogic.gdx.graphics.Color:
+    {
+          white: { r: 1, g: 1, b: 1, a: 1 },
+          black: { r: 0, g: 0, b: 0, a: 1 },
+          gray:  { r:.44, g: .62, b: .80, a: 1 },
+          red:   { r: 1, g: 0, b: 0, a: 1 },
+          green: { r: 0, g: 1, b: 0, a: 1 },
+          blue:  { r: 0, g: 0, b: 1, a: 1 }
+},
+
+  com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle:
+  {
+    play:
+      {
+        down:menu-active,
+        up: menu-inactive,
+      }
+  },
+  com.badlogic.gdx.graphics.g2d.BitmapFont:
+  {
+      myriad-pro:
+      {
+        file: font/myriad.fnt,
+        scale: 4
+      }
+  },
+  com.badlogic.gdx.scenes.scene2d.ui.Table:
+{
+   default:
+   {
+     background: rectangle
+   }
+},
+  com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle:
+{
+  default:
+  {
+    fontColor: black,
+    checkboxOn: toggle-off,
+    checkboxOff: toggle-on,
+    font: myriad-pro,
+    checkedOffsetX: -1,
+    checkedOffsetY: -2
+  }
+},
+
+  com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle:
+{
+  default:
+  {
+    font: myriad-pro,
+    fontColor: black
+  },
+  node:
+  {
+    font:myriad-pro,
+    fontColor:white
+  }
+},
+  com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle:
+{
+  default:
+  {
+    titleFont: myriad-pro,
+    background: rectangle,
+    titleFontColor: white
+  },
+},
+  com.badlogic.gdx.scenes.scene2d.ui.Image:
+{
+  default:
+  {
+    drawable: toggle-off
+  }
+},
+  com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:
+{
+  default:
+  {
+    background: search-main,
+    font:myriad-pro,
+    fontColor: white,
+    selection: input-error,
+    cursor: cursor
+  }
+},
+  com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle:
+{
+  default:
+  {
+    font:myriad-pro,
+    fontColorUnselected:white,
+    fontColorSelected:gray,
+    selection: highlighter,
+    background: rectangle,
+  }
+
+},
+  com.badlogic.gdx.scenes.scene2d.ui.ScrollPane$ScrollPaneStyle:
+{
+  default:
+  {
+    vScroll: highlighter,
+    vScrollKnob: highlighter
+  }
+},
+
+
+}

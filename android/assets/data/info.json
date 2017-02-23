@@ -1,0 +1,807 @@
+{
+  buildings:
+  [
+    {
+      room:"Elementary Clinic",
+      floor: 1,
+      X: 544.0,
+      Y: 688.0
+    },
+    {
+      room:"Elementary Principal's office",
+      floor: 1,
+      X: 544.0,
+      Y: 688.0
+    },
+    {
+      room:"Elementary Guidance Office",
+      floor: 1,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"A12, A13, A14, A15 (DKLC Classrooms)",
+      floor:1,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"A16, A17 Kindergarten/Preschool Classroom)",
+      floor:1,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"A18 (Elementary Audio Visual Room)",
+      floor:1,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Grade school Library",
+      floor:1,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Elementary Audio-Visual Room",
+      floor:2,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Elementary Kitchen Laboratory",
+      floor: 2,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Elementary HELE Room",
+      floor: 2,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Elementary Faculty Room",
+      floor: 2,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"A27 (Elementary Study Room)",
+      floor: 2,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"A22, A23, A24, A25, A26 (Elementary Classrooms)",
+      floor: 2,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Elementary Coordinators' Office",
+      floor: 2,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"A31, A32, A33, A34, A35, A36, A37 (Elementary Classrooms)",
+      floor: 3,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"A38 (Elementary Computer Laboratory)",
+      floor: 3,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Elementary Supreme Pupil Government",
+      floor: 3,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Elementary Science Library",
+      floor: 3,
+      X: 544.0,
+      Y: 688.0
+    },
+
+    {
+      room:"B11 (Electronics Room/GE Laboratory)",
+      floor: 3,
+      X: 208.0,
+      Y: 688.0
+    },
+
+    {
+      room:"B12 (Electrical Laboratory)",
+      floor: 1,
+      X: 208.0,
+      Y: 688.0
+    },
+
+    {
+      room:"B13, B13b (Classrooms)",
+      floor: 1,
+      X: 208.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Soil and Materials Testing Laboratory",
+      floor: 1,
+      X: 208.0,
+      Y: 688.0
+    },
+
+    {
+      room:"C16, C16a, C17, C18 (College Classrooms)",
+      floor: 1,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"University Research Center (URC) Office",
+      floor: 1,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"College Female Coordinators Office",
+      floor: 1,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"Community Extension Services Office/Alumni Coordinator's Office",
+      floor: 1,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"Postal Office",
+      floor: 1,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"Office of Student Affairs Office (SAO)",
+      floor: 1,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"C21 (Drafting Room)",
+      floor: 1,
+      X: 384.0,
+      Y: 640.0
+    },
+    {
+      room:"C22, C23, C23a, C24, C25,C25a (Classrooms)",
+      floor: 2,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"College Guidance Office",
+      floor: 2,
+      X: 384.0,
+      Y: 640.0
+    },
+    {
+      room:"D11, D12, D13, D14 (Classrooms)",
+      floor: 2,
+      X: 384.0,
+      Y: 640.0
+    },
+
+    {
+      room:"D21, D22, D23, D24",
+      floor: 1,
+      X: 240.0,
+      Y: 608.0
+    },
+
+    {
+      room:"SEAID Dean's Office",
+      floor: 2,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"SBAA Dean's Office",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"Office of the Human Resource Management Officer ",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"Office of the Vice President for Administration",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+    {
+      room:"Office of University President",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"Sacred Heart Board Room",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"Office of the Vice President for Academics",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"NSTP Office",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"SEAS Dean's Office",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+    {
+      room:"E21, E22, E23, E24, E25, E26, E27",
+      floor: 1,
+      X: 320.0,
+      Y: 544.0
+    },
+    {
+      room:"E31, E32, E33, E34, E35, E36, E37",
+      floor: 2,
+      X: 320.0,
+      Y: 544.0
+    },
+
+    {
+      room:"H11, H12, H13, H14, H15",
+      floor: 3,
+      X: 352.0,
+      Y: 320.0
+    },
+
+    {
+      room:"High School Faculty Room",
+      floor: 1,
+      X: 352.0,
+      Y: 320.0
+    },
+
+    {
+      room:"University Clinic",
+      floor: 1,
+      X: 352.0,
+      Y: 320.0
+    },
+
+    {
+      room:"H21, H22, H23, H24, H25, H26",
+      floor: 1,
+      X: 352.0,
+      Y: 320.0
+    },
+
+    {
+      room:"G14 (High School Tailoring Laboratory)",
+      floor: 2,
+      X: 272.0,
+      Y: 256.0
+    },
+    {
+      room:"High School Food Processing Laboratory",
+      floor: 1,
+      X: 272.0,
+      Y: 256.0
+    },
+    {
+      room:"High School SSG and SAC's Office",
+      floor: 1,
+      X: 272.0,
+      Y: 256.0
+    },
+    {
+      room:"I102, I103, I104, I105",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"High School Guidance Office",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+    {
+      room:"High School Wellness Room",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"High School Principal's Office",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+    {
+      room:"High School Audio-Visual Room",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+    {
+      room:"Office of the Prefect of Discipline",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+    {
+      room:"I112 (Mechanical Drafting Laboratory)",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"I113 (Bread and Pastry Laboratory)",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"I202, I203, I204 (Classrooms)",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"High School Library",
+      floor: 1,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"I205, I206, I207, I208, I209,I210,I211,I212,I213,I214,I215,I216,I217,I218, I219",
+      floor: 2,
+      X: 400.0,
+      Y: 224.0
+    },
+    {
+      room:"High School Computer Laboratory Rooms",
+      floor: 2,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"Science Laboratory",
+      floor: 3,
+      X: 400.0,
+      Y: 224.0
+    },
+
+    {
+      room:"Registrar's Office",
+      floor: 3,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"Office of the Vice President for Planning, Development",
+      floor: 3,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"Accounting Office",
+      floor: 1,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"Purchasing Office",
+      floor: 1,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"Publications Office",
+      floor: 1,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"Supplies Section",
+      floor: 1,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"University Canteen",
+      floor: 1,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"College Library",
+      floor: 1,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"CICT",
+      floor: 4,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"College Computer Laboratories",
+      floor: 4,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"SICS Faculty Room",
+      floor: 4,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"SICS Dean's Office",
+      floor: 4,
+      X: 368.0,
+      Y: 480.0
+    },
+
+    {
+      room:"ECE Laboratory",
+      floor: 1,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"EE Laboratory",
+      floor: 1,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"CpE Laboratory",
+      floor: 1,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"ECE Tech Office",
+      floor: 1,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"College Biology Laboratory",
+      floor: 2,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Engineering Stock Room",
+      floor: 2,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"(College Physics Laboratory)",
+      floor: 2,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"K41, K42, K43, K44, K45 (Drafting Room)",
+      floor: 2,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"Tjolle International Hotel",
+      floor: 3,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"HRM Kitchen Lab",
+      floor: 4,
+      X: 320.0,
+      Y: 688.0
+    },
+
+    {
+      room:"SHVED & SHS Coordinator's Office",
+      floor: 1,
+      X: 336.0,
+      Y: 64.0
+    },
+
+    {
+      room:"Nursing Skills Laboratory",
+      floor: 1,
+      X: 336.0,
+      Y: 64.0
+    },
+
+    {
+      room:"Nursing Demonstration Room",
+      floor: 1,
+      X: 336.0,
+      Y: 64.0
+    },
+    {
+      room:"SHS Dean's Office ",
+      floor: 1,
+      X: 336.0,
+      Y: 64.0
+    },
+
+    {
+      room:"L21, L22, L23, L24",
+      floor: 1,
+      X: 336.0,
+      Y: 64.0
+    },
+
+    {
+      room:"L25 (Anatomy/Physiology Laboratory)",
+      floor: 2,
+      X: 336.0,
+      Y: 64.0
+    },
+
+    {
+      room:"L31, L32",
+      floor: 2,
+      X: 336.0,
+      Y: 64.0
+    },
+
+    {
+      room:"L33 (College Audio Visual Room)",
+      floor: 2,
+      X: 336.0,
+      Y: 64.0
+    },
+    {
+      room:"L34, L35",
+      floor: 3,
+      X: 336.0,
+      Y: 64.0
+    },
+
+    {
+      room:"Food and Beverage Servicing Laboratory",
+      floor: 3,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"HRM Kitchen Laboratory",
+      floor: 3,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"M21 (Classroom)",
+      floor: 3,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"SHVED Dean's Office",
+      floor: 4,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"Medical Technology Laboratory",
+      floor: 5,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"Pharmacy Laboratory",
+      floor: 3,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"Simulation Laboratory",
+      floor: 3,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"Chemistry Laboratory",
+      floor: 3,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"M31, M32, M33",
+      floor: 4,
+      X: 320.0,
+      Y: 128.0
+    },
+
+    {
+      room:"M41, M42, M43",
+      floor: 5,
+      X: 320.0,
+      Y: 128.0
+    },
+    {
+      room:"Function Hall",
+      floor: 3,
+      X: 208.0,
+      Y: 640.0
+    },
+
+    {
+      room:"SEAS Simulation Room",
+      floor: 3,
+      X: 208.0,
+      Y: 640.0
+    },
+    {
+      room:"College Female Faculty Room",
+      floor: 3,
+      X: 208.0,
+      Y: 640.0
+    },
+    {
+      room:"ECE/CpE Department Head Office",
+      floor: 3,
+      X: 208.0,
+      Y: 640.0
+    },
+
+    {
+      room:"College Male Faculty Room",
+      floor: 3,
+      X: 208.0,
+      Y: 640.0
+    },
+    {
+      room:"SBAA Simulation Room",
+      floor: 1,
+      X: 208.0,
+      Y: 640.0
+    },
+    {
+      room:"N31, N32, N33, N34",
+      floor: 4,
+      X: 208.0,
+      Y: 640.0
+    },
+    {
+      room:"N41, N42, N43, N44",
+      floor: 2,
+      X: 208.0,
+      Y: 640.0
+    },
+
+    {
+      room:"College Supreme Student Council",
+      floor: 1,
+      X: 480.0,
+      Y: 224.0
+    },
+
+    {
+      room:"Student Activity Center",
+      floor: 1,
+      X: 480.0,
+      Y: 224.0
+    },
+
+    {
+      room:"College Athletic Office",
+      floor: 1,
+      X: 112.0,
+      Y: 272.0
+    },
+
+    {
+      room:"College MAPEH Room",
+      floor: 1,
+      X: 112.0,
+      Y: 272.0
+    },
+
+    {
+      room:"Center for Culture and the Arts",
+      floor: 1,
+      X: 112.0,
+      Y: 272.0
+    }
+  ]
+}
