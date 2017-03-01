@@ -1,23 +1,31 @@
 package edu.uslt.cs.thesis.gis.object;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public class Building implements GisObject {
 
+    private Image buildingImage;
     private String room;
     private int floor;
     public int x;
     public int y;
 
     public Building(String room, int floor, int x, int y) {
-        this.room = room;
         this.floor = floor;
+        this.room = room;
         this.x = x;
         this.y = y;
     }
 
+    public void setImage(TextureAtlas atlas, String imageName) {
+        TextureRegion region = atlas.findRegion(imageName);
+        buildingImage = new Image(region);
+    }
+
     @Override
-    public void setDrawable(String imageName) {
+    public void setImage(String imageName) {
 
     }
 
@@ -58,11 +66,11 @@ public class Building implements GisObject {
 
     @Override
     public float getWidth() {
-        return 0;
+        return buildingImage.getWidth();
     }
 
     @Override
     public float getHeight() {
-        return 0;
+        return buildingImage.getHeight();
     }
 }

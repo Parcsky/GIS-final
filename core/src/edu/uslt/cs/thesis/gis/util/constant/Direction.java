@@ -1,4 +1,4 @@
-package edu.uslt.cs.thesis.gis.constant;
+package edu.uslt.cs.thesis.gis.util.constant;
 
 public enum Direction {
 

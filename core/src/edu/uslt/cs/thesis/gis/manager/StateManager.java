@@ -1,6 +1,8 @@
-package edu.uslt.cs.thesis.gis.screen;
+package edu.uslt.cs.thesis.gis.manager;
 
 import java.util.Stack;
+
+import edu.uslt.cs.thesis.gis.screen.State;
 
 public class StateManager {
 

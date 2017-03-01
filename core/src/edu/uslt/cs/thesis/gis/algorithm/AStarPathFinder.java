@@ -4,7 +4,7 @@ package edu.uslt.cs.thesis.gis.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.uslt.cs.thesis.gis.constant.Direction;
+import edu.uslt.cs.thesis.gis.util.constant.Direction;
 import edu.uslt.cs.thesis.gis.map.TileMap;
 import edu.uslt.cs.thesis.gis.map.TiledMapStage;
 
@@ -41,7 +41,7 @@ public class AStarPathFinder implements PathFinder {
                 Path path = new Path();
                 while (current != null) {
                     path.add(current);
-                    current.arrow.setVisible(true);
+                    if (current.arrow != null) current.arrow.setVisible(true);
                     current = current.parent;
 
                 }
@@ -58,6 +58,7 @@ public class AStarPathFinder implements PathFinder {
                             continue;
 
                         float newScore = movementCost(current.g, isDiagonal(x, y));
+
                         if (!open.contains(nodes[dx][dy])) {
                             open.add(nodes[dx][dy]);
                         } else if (newScore >= nodes[dx][dy].g) continue;
@@ -80,7 +81,7 @@ public class AStarPathFinder implements PathFinder {
     private void setDirection(Node node, int x, int y) {
         for (Direction dir : Direction.values()) {
             if (dir.offsetX == x && dir.offsetY == y) {
-                node.arrow.setDrawable(dir.drawableValue);
+                node.arrow.setImage(dir.drawableValue);
                 node.arrow.setVisible(false);
             }
         }
@@ -116,7 +117,7 @@ public class AStarPathFinder implements PathFinder {
                     nodes[i][j].f = 0;
                     nodes[i][j].h = 0;
                     nodes[i][j].g = 0;
-                    nodes[i][j].arrow.setDrawable("cursor");
+                    nodes[i][j].arrow.setImage("cursor");
                     nodes[i][j].arrow.setVisible(false);
                     nodes[i][j].parent = null;
                 }

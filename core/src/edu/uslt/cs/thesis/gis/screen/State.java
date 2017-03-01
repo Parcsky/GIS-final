@@ -2,7 +2,7 @@ package edu.uslt.cs.thesis.gis.screen;
 
 import edu.uslt.cs.thesis.gis.core.GIS;
 
-abstract class State {
+public abstract class State {
 
     public GIS gis;
 

@@ -1,5 +1,6 @@
 package edu.uslt.cs.thesis.gis.map;
 
+import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 
@@ -32,4 +33,6 @@ public interface TileMap {
     void dispose();
 
     OrthographicCamera getCam();
+
+    void setCam(Camera camera);
 }

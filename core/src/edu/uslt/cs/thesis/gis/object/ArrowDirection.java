@@ -1,5 +1,6 @@
 package edu.uslt.cs.thesis.gis.object;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 import edu.uslt.cs.thesis.gis.resource.Assets;
@@ -14,7 +15,7 @@ public class ArrowDirection implements GisObject {
     }
 
     @Override
-    public void setDrawable(String imageName) {
+    public void setImage(String imageName) {
         image.setDrawable(Assets.instance().skin, imageName);
     }
 

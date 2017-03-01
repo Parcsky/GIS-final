@@ -1,5 +1,10 @@
 package edu.uslt.cs.thesis.gis.gui;
 
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.EventListener;
+
+import edu.uslt.cs.thesis.gis.control.HudListener;
+
 interface HudInterface {
 
     void display();
@@ -12,4 +17,9 @@ interface HudInterface {
 
     void dispose();
 
+    void hide(Actor actor);
+
+    void show(Actor actor);
+
+    void addListener(EventListener listener);
 }

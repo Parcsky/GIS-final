@@ -1,5 +1,6 @@
 package edu.uslt.cs.thesis.gis.object;
 
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
@@ -12,8 +13,10 @@ public class LocationMarker implements GisObject {
         image.setDrawable(skin, imageName);
     }
 
+
     @Override
-    public void setDrawable(String imageName) {
+    public void setImage(String imageName) {
+
     }
 
     @Override

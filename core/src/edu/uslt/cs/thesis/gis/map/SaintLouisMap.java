@@ -1,5 +1,6 @@
 package edu.uslt.cs.thesis.gis.map;
 
+import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.maps.tiled.TiledMap;
@@ -12,16 +13,16 @@ import edu.uslt.cs.thesis.gis.resource.Assets;
 
 public class SaintLouisMap implements TileMap {
 
-    private TiledMap tiledMap;
     private TiledMapRenderer mapRenderer;
     private MapProperties mapProperties;
     private OrthographicCamera camera;
+    private TiledMap tiledMap;
 
     public SaintLouisMap(String path) {
         if (path.length() <= 0) throw new IllegalStateException(path + "is < 0");
         tiledMap = Assets.instance().get(path);
-        mapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
 
+        mapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
         mapProperties = tiledMap.getProperties();
     }
 
@@ -29,9 +30,7 @@ public class SaintLouisMap implements TileMap {
     public void setCamView(OrthographicCamera camera, float width, float height) {
         this.camera = camera;
         if (camera == null) throw new NullPointerException("Camera is null");
-
         camera.setToOrtho(false, width, height);
-        camera.position.set(camera.viewportWidth / 2, camera.viewportHeight / 2, 0);
         camera.update();
     }
 
@@ -53,7 +52,7 @@ public class SaintLouisMap implements TileMap {
 
     @Override
     public boolean isValidLocation(int dx, int dy) {
-        return dx >= 0 && dx <= getTileWidth() &&
+        return dx >= 0 && dx < getTileWidth() &&
                 dy >= 0 && dy <= getTileHeight();
     }
 
@@ -94,6 +93,11 @@ public class SaintLouisMap implements TileMap {
 
     public OrthographicCamera getCam() {
         return camera;
+    }
+
+    @Override
+    public void setCam(Camera camera) {
+        this.camera = (OrthographicCamera) camera;
     }
 
 }

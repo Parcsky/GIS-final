@@ -1,23 +1,30 @@
 package edu.uslt.cs.thesis.gis.map;
 
+import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
+import com.badlogic.gdx.utils.viewport.Viewport;
 
 import edu.uslt.cs.thesis.gis.algorithm.Node;
 import edu.uslt.cs.thesis.gis.object.ArrowDirection;
 import edu.uslt.cs.thesis.gis.resource.Assets;
 
-public class TiledMapStage extends Stage {
+public class TiledMapStage {
 
     private TileMap map;
     private Node[][] nodes;
+    private Stage stage;
 
     public TiledMapStage(TileMap map) {
         this.map = map;
+        stage = new Stage();
+        createNodes(map.getTileWidth(), map.getTileHeight(), 16, 16);
     }
 
-    public void createNodes(int width, int height, int tileWidth, int tileHeight) {
+    private void createNodes(int width, int height, int tileWidth, int tileHeight) {
         nodes = new Node[width][height];
         Label.LabelStyle labelStyle = new Label.LabelStyle();
         labelStyle.font = Assets.instance().get("font/molten.ttf");
@@ -25,25 +32,46 @@ public class TiledMapStage extends Stage {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 TiledMapTileLayer.Cell cell = map.getLayer("path").getCell(x, y);
-
                 nodes[x][y] = new Node(cell, x, y);
 
                 if (cell != null) {
                     ArrowDirection direction = new ArrowDirection();
                     direction.setBounds(x * tileWidth, y * tileHeight, tileWidth, tileHeight);
-
                     nodes[x][y].setArrow(direction);
                     nodes[x][y].setBounds(x * tileWidth, y * tileHeight, tileWidth, tileHeight);
-
-                    addActor(nodes[x][y]);
-                    addActor(direction.getObject());
+                    stage.addActor(nodes[x][y]);
+                    stage.addActor(direction.getObject());
                 }
             }
         }
     }
 
+    public void act() {
+        stage.act();
+    }
+
+    public void draw() {
+        stage.draw();
+    }
+
+    public void setViewport(Viewport viewport) {
+        stage.setViewport(viewport);
+    }
+
+    public void addActor(Actor actor) {
+        stage.addActor(actor);
+    }
+
     public void resize(int width, int height) {
-        this.getViewport().update(width, height);
+        stage.getViewport().update(width, height);
+    }
+
+    public void addListener(EventListener listener) {
+        stage.addListener(listener);
+    }
+
+    public Stage getStage() {
+        return stage;
     }
 
     public Node[][] getNodes() {
@@ -52,5 +80,21 @@ public class TiledMapStage extends Stage {
 
     public TileMap getMap() {
         return map;
+    }
+
+    public Viewport getViewport() {
+        return stage.getViewport();
+    }
+
+    public void dispose() {
+        stage.dispose();
+    }
+
+    public void debug() {
+        stage.setDebugAll(true);
+    }
+
+    public Camera getCamera() {
+        return stage.getCamera();
     }
 }

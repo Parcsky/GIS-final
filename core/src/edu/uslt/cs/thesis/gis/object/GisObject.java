@@ -4,10 +4,9 @@ import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
 public interface GisObject {
 
-    void setDrawable(String imageName);
+    void setImage(String imageName);
 
     void setPosition(float x, float y);
-
 
     void setVisible(boolean visible);
 

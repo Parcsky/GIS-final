@@ -76,15 +76,62 @@
 },
   com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:
 {
-  default:
-  {
-    background: search-main,
-    font:myriad-pro,
+  search
+  -
+  main: {
+    background: search
+    -
+    main,
+    font: myriad
+    -
+    pro,
     fontColor: white,
-    selection: input-error,
+    selection: input
+    -
+    error,
     cursor: cursor
-  }
+  },
+  search
+  -
+  little: {
+    background: search
+    -
+    little,
+    font: myriad
+    -
+    pro,
+    fontColor: white,
+    selection: input
+    -
+    error,
+    cursor: cursor
 },
+},
+  com
+  .
+  badlogic
+  .
+  gdx
+  .
+  scenes
+  .
+  scene2d
+  .
+  ui
+  .
+  SplitPane$SplitPaneStyle: {
+    default
+    -
+    vertical: {
+      handle: rectangle,
+    },
+    default
+    -
+    horizontal: {
+      handle: rectangle
+    }
+  },
+
   com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle:
 {
   default:
@@ -103,6 +150,27 @@
   {
     vScroll: highlighter,
     vScrollKnob: highlighter
+  }
+},
+  com
+  .
+  badlogic
+  .
+  gdx
+  .
+  scenes
+  .
+  scene2d
+  .
+  ui
+  .
+  Window$WindowStyle: {
+    dialog: {
+      titleFont: myriad
+      -
+      pro,
+      background: rectangle,
+      titleFontColor: white,
   }
 },
 
