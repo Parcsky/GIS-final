@@ -11,18 +11,22 @@
 
   com.badlogic.gdx.scenes.scene2d.ui.Button$ButtonStyle:
   {
-    play:
+    hide-list:
       {
         down:menu-active,
         up: menu-inactive,
-      }
+      },
+    hide-panel:
+  {
+    down:show-down,
+    up: show-up,
+  }
   },
   com.badlogic.gdx.graphics.g2d.BitmapFont:
   {
       myriad-pro:
       {
         file: font/myriad.fnt,
-        scale: 4
       }
   },
   com.badlogic.gdx.scenes.scene2d.ui.Table:
@@ -50,7 +54,7 @@
   default:
   {
     font: myriad-pro,
-    fontColor: black
+    fontColor: white
   },
   node:
   {
@@ -76,58 +80,33 @@
 },
   com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:
 {
-  search
-  -
-  main: {
-    background: search
-    -
-    main,
-    font: myriad
-    -
-    pro,
+  description: {
+  background: rectangle,
+  font: myriad-pro,
+  fontColor: white,
+  selection: input-error,
+  cursor: cursor
+},
+  search-main: {
+    background: search-main,
+    font: myriad-pro,
     fontColor: white,
-    selection: input
-    -
-    error,
+    selection: input-error,
     cursor: cursor
   },
-  search
-  -
-  little: {
-    background: search
-    -
-    little,
-    font: myriad
-    -
-    pro,
+  search-little: {
+    background: search-little,
+    font: myriad-pro,
     fontColor: white,
-    selection: input
-    -
-    error,
+    selection: input-error,
     cursor: cursor
 },
 },
-  com
-  .
-  badlogic
-  .
-  gdx
-  .
-  scenes
-  .
-  scene2d
-  .
-  ui
-  .
-  SplitPane$SplitPaneStyle: {
-    default
-    -
-    vertical: {
+  com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
+    default-vertical: {
       handle: rectangle,
     },
-    default
-    -
-    horizontal: {
+    default-horizontal: {
       handle: rectangle
     }
   },
@@ -152,27 +131,18 @@
     vScrollKnob: highlighter
   }
 },
-  com
-  .
-  badlogic
-  .
-  gdx
-  .
-  scenes
-  .
-  scene2d
-  .
-  ui
-  .
-  Window$WindowStyle: {
+  com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
     dialog: {
-      titleFont: myriad
-      -
-      pro,
+      titleFont: myriad-pro,
       background: rectangle,
       titleFontColor: white,
   }
 },
+  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle:{
+  default:{
+    imageChecked: show-down,
+    imageUp: show-up
 
-
+  }
+},
 }

@@ -4,6 +4,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 
+import edu.uslt.cs.thesis.gis.resource.Assets;
+
 public class Building implements GisObject {
 
     private Image buildingImage;
@@ -19,14 +21,11 @@ public class Building implements GisObject {
         this.y = y;
     }
 
-    public void setImage(TextureAtlas atlas, String imageName) {
-        TextureRegion region = atlas.findRegion(imageName);
-        buildingImage = new Image(region);
-    }
-
     @Override
     public void setImage(String imageName) {
-
+        TextureAtlas atlas = Assets.instance().getBuildingAtlas();
+        TextureRegion region = atlas.findRegion(imageName);
+        buildingImage = new Image(region);
     }
 
     @Override
@@ -41,7 +40,7 @@ public class Building implements GisObject {
 
     @Override
     public Image getObject() {
-        return null;
+        return buildingImage;
     }
 
     @Override

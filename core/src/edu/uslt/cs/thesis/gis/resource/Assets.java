@@ -60,6 +60,10 @@ public class Assets {
         return splashAsset;
     }
 
+    public TextureAtlas getBuildingAtlas() {
+        return buildingAtlas;
+    }
+
     public void dispose() {
         assetManager.dispose();
         skin.dispose();

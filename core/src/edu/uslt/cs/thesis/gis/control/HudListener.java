@@ -1,8 +1,10 @@
 package edu.uslt.cs.thesis.gis.control;
 
+import com.badlogic.gdx.scenes.scene2d.Event;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.InputListener;
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
+import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
 import com.badlogic.gdx.scenes.scene2d.ui.List;
 import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.TextField;
@@ -15,6 +17,7 @@ public class HudListener extends InputListener {
 
     private BuildingManager buildingManager;
     private ScrollPane scrollPane;
+    private ImageButton hidePanel;
     private List<String> list;
     private TextField search;
     private Button hideBtn;
@@ -22,18 +25,25 @@ public class HudListener extends InputListener {
 
 
     public HudListener(GIS gis, HUD hud) {
-        this.hud = hud;
-        this.buildingManager = gis.buildingManager;
-        this.search = hud.getNavigationBar().search;
-        this.hideBtn = hud.getNavigationBar().button;
+        this.hideBtn = hud.getNavigationBar().hideList;
         this.scrollPane = hud.getScrollPanel().pane;
+        this.search = hud.getNavigationBar().search;
+        this.buildingManager = gis.buildingManager;
         this.list = hud.getScrollPanel().list;
+        this.hidePanel = hud.getHidePanel();
+        this.hud = hud;
+
+        hidePanel.addListener(this);
     }
 
     @Override
-    public boolean scrolled(InputEvent event, float x, float y, int amount) {
-        if (event.getTarget() == list) {
-            System.out.println("YES");
+    public boolean handle(Event e) {
+        if (e.getTarget() == hidePanel) {
+            if (hidePanel.isChecked()) {
+                hud.hide(hud.getWindowPanel());
+            } else if (!hidePanel.isChecked()){
+                hud.show(hud.getWindowPanel());
+            }
             return true;
         }
         return false;
@@ -52,12 +62,16 @@ public class HudListener extends InputListener {
 
     @Override
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
-        return event.getTarget() == hideBtn;
+        if (event.getTarget() == hideBtn) {
+            return true;
+        }
+        return false;
     }
 
     @Override
     public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
         if (event.getTarget() == hideBtn) {
+            System.out.println("TRUE");
             if (hideBtn.isChecked()) {
                 hud.hide(scrollPane);
             } else if (!hideBtn.isChecked()) {

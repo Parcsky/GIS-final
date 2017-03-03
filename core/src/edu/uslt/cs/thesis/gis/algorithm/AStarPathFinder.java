@@ -117,7 +117,6 @@ public class AStarPathFinder implements PathFinder {
                     nodes[i][j].f = 0;
                     nodes[i][j].h = 0;
                     nodes[i][j].g = 0;
-                    nodes[i][j].arrow.setImage("cursor");
                     nodes[i][j].arrow.setVisible(false);
                     nodes[i][j].parent = null;
                 }
