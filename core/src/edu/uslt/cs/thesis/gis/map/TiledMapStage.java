@@ -1,6 +1,7 @@
 package edu.uslt.cs.thesis.gis.map;
 
 import com.badlogic.gdx.graphics.Camera;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
@@ -26,8 +27,6 @@ public class TiledMapStage {
 
     private void createNodes(int width, int height, int tileWidth, int tileHeight) {
         nodes = new Node[width][height];
-        Label.LabelStyle labelStyle = new Label.LabelStyle();
-        labelStyle.font = Assets.instance().get("font/molten.ttf");
 
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {

@@ -4,12 +4,14 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 import edu.uslt.cs.thesis.gis.manager.BuildingManager;
 import edu.uslt.cs.thesis.gis.manager.StateManager;
 import edu.uslt.cs.thesis.gis.map.SaintLouisMap;
 import edu.uslt.cs.thesis.gis.map.TileMap;
+import edu.uslt.cs.thesis.gis.map.TiledMapStage;
 import edu.uslt.cs.thesis.gis.object.LocationMarker;
 import edu.uslt.cs.thesis.gis.resource.Assets;
 import edu.uslt.cs.thesis.gis.screen.MainState;
@@ -18,8 +20,9 @@ import edu.uslt.cs.thesis.gis.util.JsonObjectBuilder;
 public class GIS extends ApplicationAdapter {
 
     private StateManager stateManager;
+    private TiledMapStage mapStage;
     private LocationMarker marker;
-    private TileMap uslMap;
+    public SaintLouisMap uslMap;
 
     public BuildingManager buildingManager;
     public Skin hudSkin;
@@ -32,15 +35,17 @@ public class GIS extends ApplicationAdapter {
 
         width = Gdx.graphics.getWidth();
         height = Gdx.graphics.getHeight();
-        uslMap = new SaintLouisMap("map/usl-map-final.tmx");
         buildingManager = new BuildingManager();
 
         JsonObjectBuilder jsonObjectBuilder = new JsonObjectBuilder("data/info.json");
         jsonObjectBuilder.build(buildingManager.getBuildings(), "buildings");
 
+        uslMap = new SaintLouisMap("map/usl-map.tmx");
+        mapStage = new TiledMapStage(uslMap);
+
         hudSkin = Assets.instance().skin;
         marker = new LocationMarker(hudSkin, "location-marker");
-        marker.setBounds(getUslMap().getWidth() / 2, getUslMap().getHeight() / 2, 50, 50);
+        marker.setBounds(uslMap.getWidth() / 2, uslMap.getHeight() / 2, 50, 50);
 
         stateManager = new StateManager();
         stateManager.add(new MainState(this));
@@ -48,7 +53,7 @@ public class GIS extends ApplicationAdapter {
 
     @Override
     public void render() {
-        Gdx.gl.glClearColor(1f, 1f, 1f, 1f);
+        Gdx.gl.glClearColor(.54f, .55f, .60f, .5f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         stateManager.update();
@@ -70,11 +75,15 @@ public class GIS extends ApplicationAdapter {
         return stateManager;
     }
 
-    public TileMap getUslMap() {
+    public SaintLouisMap getUslMap() {
         return uslMap;
     }
 
     public LocationMarker getMarker() {
         return marker;
+    }
+
+    public TiledMapStage getMapStage() {
+        return mapStage;
     }
 }

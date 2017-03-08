@@ -2,6 +2,7 @@ package edu.uslt.cs.thesis.gis.map;
 
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.maps.MapLayers;
 import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapRenderer;
@@ -16,12 +17,14 @@ public class SaintLouisMap implements TileMap {
     private TiledMapRenderer mapRenderer;
     private MapProperties mapProperties;
     private OrthographicCamera camera;
+    private MapLayers mapLayers;
     private TiledMap tiledMap;
 
     public SaintLouisMap(String path) {
         if (path.length() <= 0) throw new IllegalStateException(path + "is < 0");
         tiledMap = Assets.instance().get(path);
 
+        mapLayers = tiledMap.getLayers();
         mapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
         mapProperties = tiledMap.getProperties();
     }
@@ -52,8 +55,7 @@ public class SaintLouisMap implements TileMap {
 
     @Override
     public boolean isValidLocation(int dx, int dy) {
-        return dx >= 0 && dx < getTileWidth() &&
-                dy >= 0 && dy <= getTileHeight();
+        return dx >= 0 && dx < getTileWidth() && dy >= 0 && dy <= getTileHeight();
     }
 
     @Override
@@ -98,6 +100,10 @@ public class SaintLouisMap implements TileMap {
     @Override
     public void setCam(Camera camera) {
         this.camera = (OrthographicCamera) camera;
+    }
+
+    public void setLayerVisible(String layerName, boolean visible) {
+        mapLayers.get(layerName).setVisible(visible);
     }
 
 }

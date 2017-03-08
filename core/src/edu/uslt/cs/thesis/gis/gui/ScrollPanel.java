@@ -6,12 +6,12 @@ import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.Array;
 
-public class ScrollPanel {
+public class ScrollPanel implements Panel {
 
-    public ScrollPane pane;
     public List<String> list;
 
     private Array<String> temp;
+    private ScrollPane pane;
 
     ScrollPanel(Skin skin, String style) {
         if (skin == null) throw new NullPointerException("Scroll panel skin is null");
@@ -22,6 +22,7 @@ public class ScrollPanel {
         pane.setFlickScroll(true);
         pane.setupOverscroll(20, 30, 200f);
         pane.setOverscroll(false, true);
+        pane.setVisible(false);
     }
 
     public void addItem(String name) {
@@ -50,4 +51,31 @@ public class ScrollPanel {
         pane.getStyle().vScroll.setMinWidth(minWidth);
         pane.getStyle().vScroll.setLeftWidth(topWidth);
     }
+
+    @Override
+    public void hide() {
+        pane.setVisible(false);
+    }
+
+    @Override
+    public void show() {
+        pane.setVisible(true);
+    }
+
+    public ScrollPane getTable() {
+        return pane;
+    }
+
+    @Override
+    public String getName() {
+        return pane.getName();
+    }
+
+    @Override
+    public void setName(String name) {
+        pane.setName(name);
+    }
+
+
+
 }

@@ -42,7 +42,7 @@ public class Assets {
         manager.load("data/hud.json", Skin.class, new SkinLoader.SkinParameter("hud/gis.atlas"));
         manager.load("building/buildings.atlas", TextureAtlas.class);
         manager.load("font/molten.ttf", BitmapFont.class, moltenLoader);
-        manager.load("map/usl-map-final.tmx", TiledMap.class);
+        manager.load("map/usl-map.tmx", TiledMap.class);
 
         manager.finishLoading();
 

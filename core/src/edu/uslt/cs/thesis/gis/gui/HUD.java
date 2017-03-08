@@ -1,74 +1,64 @@
 package edu.uslt.cs.thesis.gis.gui;
 
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.EventListener;
 import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Button;
-import com.badlogic.gdx.scenes.scene2d.ui.Container;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
-import com.badlogic.gdx.scenes.scene2d.ui.ImageButton;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
+import com.badlogic.gdx.scenes.scene2d.ui.Stack;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.ui.Window;
-import com.badlogic.gdx.utils.Align;
-import com.badlogic.gdx.utils.viewport.StretchViewport;
+import com.badlogic.gdx.utils.viewport.FillViewport;
+
+import edu.uslt.cs.thesis.gis.util.constant.Option;
 
 
 public class HUD implements HudInterface {
 
-    private NavigationBar navigationBar;
-    private Container<Image> container;
+    private BuildingInfoPanel buildingInfoPanel;
+    private NavigationPanel navigationPanel;
+    private TerrainPanel terrainPanel;
     private ScrollPanel scrollPanel;
-    private Label description;
-    private ImageButton hidePanel;
+    private MenuPanel menuPanel;
+    private ZoomPanel zoomPanel;
+
     private Stage hudStage;
-    private Window window;
     private Table table;
 
-
     public HUD(Skin skin, int width, int height) {
-        description = new Label("", skin, "default");
-        description.setText("Information: \n blah blah blah blah blah.....");
-        description.setAlignment(Align.topLeft);
-        description.setFontScale(.8f);
-        description.setWrap(true);
+        hudStage = new Stage(new FillViewport(width, height));
 
-        container = new Container<Image>();
-        container.setActor(new Image(new Texture("doge.jpeg")));
+        buildingInfoPanel = new BuildingInfoPanel(skin, width, height);
+        buildingInfoPanel.setName(Option.BUILDING_OPTION);
 
-        window = new Window("Building Name", skin, "dialog");
-        window.getTitleTable().top().left().row();
-        window.getTitleLabel().setFontScale(1f);
-        window.getTitleLabel().setWrap(true);
+        navigationPanel = new NavigationPanel(skin, width, height);
+        navigationPanel.setName(Option.NAVIGATION_OPTION);
 
-        window.add(container).padTop(window.getTitleTable().getPrefHeight()).minSize(0, 0).prefSize(window.getPrefWidth(), 150).top().left().row();
-        window.add(description).minSize(0, 0).prefSize(window.getPrefWidth(), 100).top().left();
-        window.pad(0, 5, 5, 5);
+        terrainPanel = new TerrainPanel(skin, width, height);
+        terrainPanel.setName(Option.TERRAIN_OPTION);
+
+        zoomPanel = new ZoomPanel(skin, width, height);
+        zoomPanel.setName(Option.ZOOM_OPTION);
 
         scrollPanel = new ScrollPanel(skin, "default");
+        scrollPanel.setName(Option.SCROLL_OPTION);
         scrollPanel.vScrollSize(15, 15);
         scrollPanel.vKnobSize(5, 5);
 
-        hidePanel = new ImageButton(skin, "default");
+        menuPanel = new MenuPanel(skin);
+        menuPanel.setName(Option.MENU_OPTION);
 
-        navigationBar = new NavigationBar(skin, width, height);
-        hudStage = new Stage(new StretchViewport(width, height));
+        Stack stack = new Stack();
+        stack.setName("stack");
+        stack.add(zoomPanel.getTable());
+        stack.add(scrollPanel.getTable());
 
         table = new Table();
         table.setFillParent(true);
-        table.add(navigationBar).minSize(0, 0).colspan(2).prefSize(width, 40).pad(3).top().row();
-        table.add(hidePanel).minSize(0, 0).prefSize(20, 20).left().row();
-        table.add(window).minSize(0, 0).prefSize(200, 250).top().left().pad(5);
-        table.add(scrollPanel.pane).minSize(width / 2, height / 2).prefSize(width / 2, height / 2).top().right().pad(0, 5, 5, 5);
+        table.add(navigationPanel.getTable()).minSize(0).colspan(2).prefSize(width, height * .08f).pad(2).top().row();
+        table.add(menuPanel.getTable()).minSize(0).prefSize(width * .35f, height * .25f).pad(2).top().left();
+        table.add(stack).minSize(0).prefSize(width * .35f, height * .45f).top().right().pad(0, 5, 5, 5).row();
+        table.add(buildingInfoPanel.getTable()).minSize(0).prefSize(width * .4f, height * .5f).bottom().left();
+        table.add(terrainPanel.getTable()).minSize(0).prefSize(width * .25f, height * .25f).pad(5).bottom().right();
         table.top();
-
-        hudStage.addActor(table);
-    }
-
-    public void debug() {
-        table.debug();
     }
 
     @Override
@@ -96,17 +86,32 @@ public class HUD implements HudInterface {
         hudStage.dispose();
     }
 
+    @Override
     public void hide(Actor actor) {
-        if (table.getChildren().contains(actor, false)) {
-            actor.setVisible(false);
+        for (int i = 0; i < table.getChildren().size; i++) {
+            if (table.getChildren().get(i).equals(actor)) {
+                table.getChildren().get(i).setVisible(false);
+                return;
+            }
         }
     }
 
     @Override
     public void show(Actor actor) {
-        if (table.getChildren().contains(actor, true)) {
-            actor.setVisible(true);
+        for (int i = 0; i < table.getChildren().size; i++) {
+            if (table.getChildren().get(i).equals(actor)) {
+                table.getChildren().get(i).setVisible(true);
+                return;
+            }
         }
+    }
+
+    public Actor getPanel(String name) {
+        for (int i = 0; i < table.getChildren().size; i++) {
+            if (table.getChildren().get(i).getName().equals(name))
+                return table.getChildren().get(i);
+        }
+        return null;
     }
 
     @Override
@@ -114,27 +119,40 @@ public class HUD implements HudInterface {
         hudStage.addListener(listener);
     }
 
-    public Stage getHud() {
+    public Stage getStage() {
         return hudStage;
+    }
+
+    public MenuPanel getMenuPanel() {
+        return menuPanel;
+    }
+
+    public BuildingInfoPanel getBuildingInfoPanel() {
+        return buildingInfoPanel;
+    }
+
+    public NavigationPanel getNavigationPanel() {
+        return navigationPanel;
     }
 
     public ScrollPanel getScrollPanel() {
         return scrollPanel;
     }
 
-    public NavigationBar getNavigationBar() {
-        return navigationBar;
+    public TerrainPanel getTerrainPanel() {
+        return terrainPanel;
     }
 
-    public Container<Image> getContainer() {
-        return container;
+    public Table getTable() {
+        return table;
     }
 
-    public ImageButton getHidePanel() {
-        return hidePanel;
+    public ZoomPanel getZoomPanel() {
+        return zoomPanel;
     }
 
-    public Window getWindowPanel() {
-        return window;
+    public void debug() {
+        table.debug();
     }
+
 }
