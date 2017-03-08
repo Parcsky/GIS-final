@@ -33,16 +33,6 @@ public class HudListener extends ClickListener {
         this.buildingManager = gis.buildingManager;
         this.menuPanel = hud.getMenuPanel();
         this.list = hud.getScrollPanel().list;
-
-
-        list.addListener(this);
-    }
-
-
-    @Override
-    public void clicked(InputEvent event, float x, float y) {
-        System.out.println(getTapCount());
-
     }
 
     @Override
@@ -53,23 +43,15 @@ public class HudListener extends ClickListener {
             }
             return true;
         }
-
+        System.out.println(getTapCount());
         if (event.getTarget().equals(menuList)) {
             if (!menuList.isChecked()) hud.getMenuPanel().show();
             else if (menuList.isChecked()) hud.getMenuPanel().hide();
             return true;
         }
         menuController(event);
-
-        return super.touchDown(event, x, y, pointer, button);
+        return false;
     }
-
-    @Override
-    public void touchUp(InputEvent event, float x, float y, int pointer, int button) {
-        System.out.println(pointer);
-        super.touchUp(event, x, y, pointer, button);
-    }
-
 
     private boolean menuController(InputEvent event) {
         ImageTextButton imageButton = (ImageTextButton) menuPanel.getChildren(event.getTarget().getName());
@@ -78,14 +60,12 @@ public class HudListener extends ClickListener {
             if (!imageButton.isChecked()) {
                 hud.show(hud.getPanel(imageButton.getName()));
                 return true;
-
             } else if (imageButton.isChecked()) {
                 hud.hide(hud.getPanel(imageButton.getName()));
             }
         }
         return false;
     }
-
 
     @Override
     public boolean keyTyped(InputEvent event, char character) {
@@ -97,5 +77,4 @@ public class HudListener extends ClickListener {
         list.setItems(buildingManager.getBuildingName());
         return false;
     }
-
 }

@@ -26,7 +26,6 @@ public class AStarPathFinder implements PathFinder {
     @Override
     public Path findPath(int startX, int startY, int goalX, int goalY) {
         clearNodes();
-        System.out.println(nodes.length);
         Node goal = nodes[goalX][goalY];
         Node current = nodes[startX][startY];
 
