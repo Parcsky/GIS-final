@@ -59,9 +59,9 @@ public class GisListener extends ActorGestureListener {
         if (event.getTarget().equals(marker.getObject())) {
             if (!gis.getUslMap().isValidLocation(startX, startY)) return;
             marker.setPosition(dx, dy);
+            if(list.getSelected() != null)
             pathFinder.findPath(startX, startY, goalX, goalY);
         }
-
 
         float posX = uslMap.getCam().position.x += deltaX * .6f;
         float posY = uslMap.getCam().position.y += deltaY * .6f;
