@@ -25,7 +25,7 @@ public class JsonObjectBuilder {
         for (JsonValue objectTemp : classJson.iterator()) {
             String room = objectTemp.getString("room");
             String imagePath = objectTemp.getString("visual");
-            int floor = objectTemp.getInt("floor");
+            String floor = objectTemp.getString("floor");
             int posX = objectTemp.getInt("X");
             int posY = objectTemp.getInt("Y");
             Building building = new Building(room, floor, posX, posY);
