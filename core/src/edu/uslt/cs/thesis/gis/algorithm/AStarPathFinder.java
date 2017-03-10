@@ -69,7 +69,6 @@ public class AStarPathFinder implements PathFinder {
                             nodes[dx][dy].f = nodes[dx][dy].g + nodes[dx][dy].h;
                             nodes[dx][dy].parent = current;
                         }
-
                     }
                 }
             }
