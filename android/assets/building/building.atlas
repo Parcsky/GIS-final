@@ -1,0 +1,192 @@
+
+building.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+aloysiusbldg
+  rotate: false
+  xy: 1, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+cfcbldg
+  rotate: false
+  xy: 1, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+charlespieters
+  rotate: false
+  xy: 503, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+cicmbldg
+  rotate: false
+  xy: 1, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+cicmdistrichouse
+  rotate: false
+  xy: 503, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+constantjurgens
+  rotate: false
+  xy: 1005, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+lecarosgate
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+mainentrance
+  rotate: false
+  xy: 503, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+maryimmaculatedorm
+  rotate: false
+  xy: 1005, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+mbuilding
+  rotate: false
+  xy: 1507, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+nbuilding
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+obuilding
+  rotate: false
+  xy: 1005, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+outdoorstage
+  rotate: false
+  xy: 1507, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+pbuilding
+  rotate: false
+  xy: 1005, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+pjpbuilding
+  rotate: false
+  xy: 1507, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+qbuilding
+  rotate: false
+  xy: 1507, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+
+building2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+slrbuilding
+  rotate: false
+  xy: 1, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+sportsfield
+  rotate: false
+  xy: 1, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+theophileverbistbldg
+  rotate: false
+  xy: 503, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+tjollehotel
+  rotate: false
+  xy: 1, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Untitled-3
+  rotate: false
+  xy: 503, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Untitled-4
+  rotate: false
+  xy: 1005, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Untitled-6
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+Untitled-7
+  rotate: false
+  xy: 503, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+uslchapel
+  rotate: false
+  xy: 1005, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+uslgym
+  rotate: false
+  xy: 1507, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
