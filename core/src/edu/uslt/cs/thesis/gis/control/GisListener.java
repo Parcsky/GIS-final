@@ -51,6 +51,18 @@ public class GisListener extends ActorGestureListener {
 
     @Override
     public void pan(InputEvent event, float x, float y, float deltaX, float deltaY) {
+        startX = (int) (event.getTarget().getX() / 16 + marker.getWidth() / 2 / 16);
+        startY = (int) (event.getTarget().getY() / 16 + marker.getHeight() / 2 / 16);
+        float dx = x - marker.getWidth() / 2;
+        float dy = y - marker.getHeight() / 2;
+
+        if (event.getTarget().equals(marker.getObject())) {
+            if (!gis.getUslMap().isValidLocation(startX, startY)) return;
+            marker.setPosition(dx, dy);
+            pathFinder.findPath(startX, startY, goalX, goalY);
+        }
+
+
         float posX = uslMap.getCam().position.x += deltaX * .6f;
         float posY = uslMap.getCam().position.y += deltaY * .6f;
         float viewPortHalfX = uslMap.getCam().viewportWidth / 2;
@@ -60,16 +72,6 @@ public class GisListener extends ActorGestureListener {
         posY = MathUtils.clamp(posY, viewPortHalfY, uslMap.getHeight() - viewPortHalfY);
 
         uslMap.getCam().position.lerp(tp.set(posX, posY, 0), 0.1f);
-
-        if (event.getTarget().equals(marker.getObject())) {
-            float dx = x - marker.getWidth() / 2;
-            float dy = y - marker.getHeight() / 2;
-            if (!gis.getUslMap().isValidLocation(startX, startY)) return;
-            startX = (int) (event.getTarget().getX() / 16 + marker.getWidth() / 2 / 16);
-            startY = (int) (event.getTarget().getY() / 16 + marker.getHeight() / 2 / 16);
-            marker.setPosition(dx, dy);
-            pathFinder.findPath(startX, startY, goalX, goalY);
-        }
     }
 
     @Override
