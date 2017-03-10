@@ -23,6 +23,8 @@ public class HudListener extends ClickListener {
     private Button menuList;
     private HUD hud;
     private MenuPanel menuPanel;
+
+
     private final int TAPCOUNT_MAX = 3;
 
     public HudListener(GIS gis, HUD hud) {
@@ -38,28 +40,24 @@ public class HudListener extends ClickListener {
     @Override
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         if (event.getTarget().equals(list)) {
-            if (getTapCount() == TAPCOUNT_MAX) {
-                scrollPane.setVisible(false);
-            }
-            return true;
+            System.out.println(getTapCount());
+            return super.touchDown(event, x, y, pointer, button);
         }
-        System.out.println(getTapCount());
         if (event.getTarget().equals(menuList)) {
             if (!menuList.isChecked()) hud.getMenuPanel().show();
             else if (menuList.isChecked()) hud.getMenuPanel().hide();
-            return true;
         }
         menuController(event);
         return false;
     }
 
     private boolean menuController(InputEvent event) {
-        ImageTextButton imageButton = (ImageTextButton) menuPanel.getChildren(event.getTarget().getName());
+        ImageTextButton imageButton = (ImageTextButton) menuPanel.getChildren(event.getTarget());
         if (event.getTarget().equals(imageButton)) {
             if (event.getTarget().getName().equals("Quit")) Gdx.app.exit();
             if (!imageButton.isChecked()) {
                 hud.show(hud.getPanel(imageButton.getName()));
-                return true;
+                return false;
             } else if (imageButton.isChecked()) {
                 hud.hide(hud.getPanel(imageButton.getName()));
             }
@@ -67,6 +65,14 @@ public class HudListener extends ClickListener {
         return false;
     }
 
+    @Override
+    public void clicked(InputEvent event, float x, float y) {
+        if (event.getTarget().equals(list)) {
+            if (getTapCount() == 2) {
+                hud.getScrollPanel().hide();
+            }
+        }
+    }
     @Override
     public boolean keyTyped(InputEvent event, char character) {
         buildingManager.clearList();
