@@ -10,11 +10,11 @@ public class Building implements GisObject {
 
     private Image buildingImage;
     private String room;
-    private int floor;
+    private String floor;
     public int x;
     public int y;
 
-    public Building(String room, int floor, int x, int y) {
+    public Building(String room, String floor, int x, int y) {
         this.floor = floor;
         this.room = room;
         this.x = x;
@@ -31,6 +31,10 @@ public class Building implements GisObject {
     @Override
     public void setPosition(float x, float y) {
 
+    }
+
+    public String getFloor() {
+        return floor;
     }
 
     @Override
