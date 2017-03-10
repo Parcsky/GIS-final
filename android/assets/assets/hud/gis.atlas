@@ -1,0 +1,278 @@
+
+gis.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+navigation
+  rotate: false
+  xy: 1, 1954
+  size: 1545, 92
+  orig: 1545, 92
+  offset: 0, 0
+  index: -1
+usl-logo
+  rotate: false
+  xy: 1, 1409
+  size: 978, 543
+  orig: 978, 543
+  offset: 0, 0
+  index: -1
+rectangle
+  rotate: false
+  xy: 1, 820
+  size: 800, 587
+  orig: 800, 587
+  offset: 0, 0
+  index: -1
+usl-banner
+  rotate: false
+  xy: 1, 560
+  size: 1000, 258
+  orig: 1000, 258
+  offset: 0, 0
+  index: -1
+search-main
+  rotate: false
+  xy: 1, 417
+  size: 1091, 141
+  orig: 1091, 141
+  offset: 0, 0
+  index: -1
+map-location
+  rotate: false
+  xy: 981, 1440
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+rectangle-small
+  rotate: false
+  xy: 1, 319
+  size: 840, 96
+  orig: 840, 96
+  offset: 0, 0
+  index: -1
+input-active
+  rotate: false
+  xy: 1, 217
+  size: 580, 100
+  orig: 580, 100
+  offset: 0, 0
+  index: -1
+input-error
+  rotate: false
+  xy: 1, 115
+  size: 580, 100
+  orig: 580, 100
+  offset: 0, 0
+  index: -1
+search-little
+  rotate: false
+  xy: 1, 19
+  size: 574, 94
+  orig: 574, 94
+  offset: 0, 0
+  index: -1
+input-normal
+  rotate: false
+  xy: 981, 1344
+  size: 520, 94
+  orig: 520, 94
+  offset: 0, 0
+  index: -1
+drop-down
+  rotate: false
+  xy: 1548, 1807
+  size: 424, 239
+  orig: 424, 239
+  offset: 0, 0
+  index: -1
+container
+  rotate: false
+  xy: 1495, 1559
+  size: 289, 246
+  orig: 289, 246
+  offset: 0, 0
+  index: -1
+location-marker
+  rotate: false
+  xy: 583, 61
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+exit-btn
+  rotate: false
+  xy: 1495, 1483
+  size: 289, 74
+  orig: 289, 74
+  offset: 0, 0
+  index: -1
+help-btn
+  rotate: false
+  xy: 843, 341
+  size: 289, 74
+  orig: 289, 74
+  offset: 0, 0
+  index: -1
+show-btn
+  rotate: false
+  xy: 1503, 1407
+  size: 289, 74
+  orig: 289, 74
+  offset: 0, 0
+  index: -1
+highlighter
+  rotate: false
+  xy: 1503, 1349
+  size: 289, 56
+  orig: 289, 56
+  offset: 0, 0
+  index: -1
+highlighter-2
+  rotate: false
+  xy: 1786, 1713
+  size: 188, 92
+  orig: 188, 92
+  offset: 0, 0
+  index: -1
+toggle-off
+  rotate: false
+  xy: 803, 1359
+  size: 133, 48
+  orig: 133, 48
+  offset: 0, 0
+  index: -1
+toggle-on
+  rotate: false
+  xy: 1786, 1663
+  size: 133, 48
+  orig: 133, 48
+  offset: 0, 0
+  index: -1
+zoom-active
+  rotate: false
+  xy: 803, 1285
+  size: 96, 72
+  orig: 96, 72
+  offset: 0, 0
+  index: -1
+zoom-out-active
+  rotate: false
+  xy: 1786, 1589
+  size: 96, 72
+  orig: 96, 72
+  offset: 0, 0
+  index: -1
+zoom-in-active
+  rotate: false
+  xy: 803, 1211
+  size: 93, 72
+  orig: 93, 72
+  offset: 0, 0
+  index: -1
+zoom-in-inactive
+  rotate: false
+  xy: 1786, 1515
+  size: 93, 72
+  orig: 93, 72
+  offset: 0, 0
+  index: -1
+cursor
+  rotate: false
+  xy: 1495, 1846
+  size: 48, 106
+  orig: 48, 106
+  offset: 0, 0
+  index: -1
+east
+  rotate: false
+  xy: 803, 1141
+  size: 74, 68
+  orig: 74, 68
+  offset: 0, 0
+  index: -1
+north
+  rotate: false
+  xy: 1974, 1972
+  size: 68, 74
+  orig: 68, 74
+  offset: 0, 0
+  index: -1
+south
+  rotate: false
+  xy: 803, 1065
+  size: 68, 74
+  orig: 68, 74
+  offset: 0, 0
+  index: -1
+west
+  rotate: false
+  xy: 803, 995
+  size: 74, 68
+  orig: 74, 68
+  offset: 0, 0
+  index: -1
+show-down
+  rotate: false
+  xy: 803, 945
+  size: 74, 48
+  orig: 74, 48
+  offset: 0, 0
+  index: -1
+show-up
+  rotate: false
+  xy: 803, 895
+  size: 74, 48
+  orig: 74, 48
+  offset: 0, 0
+  index: -1
+north-east
+  rotate: false
+  xy: 1974, 1912
+  size: 58, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1
+north-west
+  rotate: false
+  xy: 803, 835
+  size: 58, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1
+south-east
+  rotate: false
+  xy: 1974, 1852
+  size: 58, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1
+menu-active
+  rotate: false
+  xy: 1495, 1807
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1
+south-west
+  rotate: false
+  xy: 1921, 1653
+  size: 58, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1
+menu-inactive
+  rotate: false
+  xy: 1884, 1624
+  size: 35, 37
+  orig: 35, 37
+  offset: 0, 0
+  index: -1
+blank
+  rotate: false
+  xy: 1, 1
+  size: 16, 16
+  orig: 16, 16
+  offset: 0, 0
+  index: -1
