@@ -57,9 +57,7 @@ public class GisListener extends ActorGestureListener {
         float dy = y - marker.getHeight() / 2;
 
         if (event.getTarget().equals(marker.getObject())) {
-            if (!gis.getUslMap().isValidLocation(startX, startY)) return;
             marker.setPosition(dx, dy);
-            if(list.getSelected() != null)
             pathFinder.findPath(startX, startY, goalX, goalY);
         }
 
@@ -70,19 +68,17 @@ public class GisListener extends ActorGestureListener {
 
         posX = MathUtils.clamp(posX, viewPortHalfX, uslMap.getWidth() - viewPortHalfX);
         posY = MathUtils.clamp(posY, viewPortHalfY, uslMap.getHeight() - viewPortHalfY);
-
         uslMap.getCam().position.lerp(tp.set(posX, posY, 0), 0.1f);
     }
 
     @Override
     public void tap(InputEvent event, float x, float y, int count, int button) {
-        System.out.println("X: " + (int) x);
-        System.out.println("Y: " + (int) y);
-        if (event.getTarget().equals(list)) {
+        if (event.getTarget().equals(list) && list.getSelected() != null) {
             Building building = buildingManager.get(list.getSelected());
             goalX = (int) building.getX() / 16;
             goalY = (int) building.getY() / 16;
             infoPanel.setContainerInfo(building.getObject(), building.getName(), building.getFloor(), "info");
+            pathFinder.findPath(startX, startY, goalX, goalY);
         }
     }
 }
