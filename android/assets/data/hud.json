@@ -16,39 +16,33 @@
         down:menu-active,
         up: menu-inactive,
       },
-    hide-panel:
-  {
-    down:show-down,
-    up: show-up,
-  }
+    zoom-in:
+      {
+        down:zoom-in-active,
+        up: zoom-in-inactive,
+      },
+    zoom-out:
+      {
+        down:zoom-out-active,
+        up: zoom-active,
+      }
   },
   com.badlogic.gdx.graphics.g2d.BitmapFont:
   {
       myriad-pro:
       {
         file: font/myriad.fnt,
+        scale: 4
       }
   },
-  com.badlogic.gdx.scenes.scene2d.ui.Table:
-{
-   default:
-   {
-     background: rectangle
-   }
-},
-  com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle:
-{
-  default:
-  {
-    fontColor: black,
-    checkboxOn: toggle-off,
-    checkboxOff: toggle-on,
-    font: myriad-pro,
-    checkedOffsetX: -1,
-    checkedOffsetY: -2
-  }
-},
 
+  com.badlogic.gdx.scenes.scene2d.ui.Table:{
+    default:
+    {
+      background: container
+    }
+
+}
   com.badlogic.gdx.scenes.scene2d.ui.Label$LabelStyle:
 {
   default:
@@ -56,37 +50,9 @@
     font: myriad-pro,
     fontColor: white
   },
-  node:
-  {
-    font:myriad-pro,
-    fontColor:white
-  }
-},
-  com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle:
-{
-  default:
-  {
-    titleFont: myriad-pro,
-    background: rectangle,
-    titleFontColor: white
-  },
-},
-  com.badlogic.gdx.scenes.scene2d.ui.Image:
-{
-  default:
-  {
-    drawable: toggle-off
-  }
 },
   com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:
 {
-  description: {
-  background: rectangle,
-  font: myriad-pro,
-  fontColor: white,
-  selection: input-error,
-  cursor: cursor
-},
   search-main: {
     background: search-main,
     font: myriad-pro,
@@ -102,15 +68,6 @@
     cursor: cursor
 },
 },
-  com.badlogic.gdx.scenes.scene2d.ui.SplitPane$SplitPaneStyle: {
-    default-vertical: {
-      handle: rectangle,
-    },
-    default-horizontal: {
-      handle: rectangle
-    }
-  },
-
   com.badlogic.gdx.scenes.scene2d.ui.List$ListStyle:
 {
   default:
@@ -132,17 +89,50 @@
   }
 },
   com.badlogic.gdx.scenes.scene2d.ui.Window$WindowStyle: {
-    dialog: {
+    default: {
       titleFont: myriad-pro,
-      background: rectangle,
+      background: container,
       titleFontColor: white,
   }
 },
-  com.badlogic.gdx.scenes.scene2d.ui.ImageButton$ImageButtonStyle:{
-  default:{
-    imageChecked: show-down,
-    imageUp: show-up
+  com.badlogic.gdx.scenes.scene2d.ui.ImageTextButton$ImageTextButtonStyle: {
 
-  }
+  default:{
+        font: myriad-pro,
+        up: help-btn,
+        down: highlighter,
+        pressedOffsetX: -2,
+        pressedOffsetY: -2
 },
+  exit-btn:{
+        font: myriad-pro,
+        up: exit-btn,
+        down: highlighter,
+        pressedOffsetX: -2,
+        pressedOffsetY: -2
+  },
+  setting-btn:{
+        font: myriad-pro,
+        up: show-btn,
+        down: highlighter,
+        pressedOffsetX: -2,
+        pressedOffsetY: -2
+  },
+
+},
+
+  com.badlogic.gdx.scenes.scene2d.ui.CheckBox$CheckBoxStyle:{
+
+  default:{
+    font: myriad-pro,
+    fontColor: white,
+    checkboxOff: toggle-on,
+    checkboxOn: toggle-off,
+    pressedOffsetX: -2,
+    pressedOffsetY: -2,
+
+  },
+
+},
+
 }
