@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.utils.Align;
 
 import edu.uslt.cs.thesis.gis.util.FontGenerator;
+import edu.uslt.cs.thesis.gis.util.constant.Option;
 
 public class NavigationPanel implements Panel {
 
@@ -18,6 +19,7 @@ public class NavigationPanel implements Panel {
     NavigationPanel(Skin skin, int width, int height) {
         if (skin == null) throw new NullPointerException("Skin is null");
         table = new Table(skin);
+        setName(Option.NAVIGATION_OPTION);
         table.setBackground("navigation");
 
         search = new TextField("", skin, "search-little");

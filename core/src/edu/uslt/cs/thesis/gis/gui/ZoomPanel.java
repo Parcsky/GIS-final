@@ -4,6 +4,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 
+import edu.uslt.cs.thesis.gis.util.constant.Option;
+
 
 public class ZoomPanel implements Panel {
 
@@ -16,6 +18,7 @@ public class ZoomPanel implements Panel {
         zoomOut = new Button(skins, "zoom-out");
 
         table = new Table();
+        setName(Option.ZOOM_OPTION);
         table.top().right();
         table.add(zoomIn).minSize(0).prefSize(width * .07f, height * .09f).row();
         table.add(zoomOut).minSize(0).prefSize(width * .07f, height * .09f);

@@ -21,7 +21,9 @@ public class BuildingInfoPanel implements Panel {
 
     BuildingInfoPanel(Skin skin, int width, int height) {
         buildingName = new Label("Building name", skin, "default");
-        buildingInfo = new Label("info", skin, "default");
+        buildingName.setWrap(true);
+        buildingInfo = new Label("", skin, "default");
+
         floor = new Label("1", skin, "default");
         Label floorLabel = new Label("Floor - ", skin, "default");
 
@@ -30,7 +32,7 @@ public class BuildingInfoPanel implements Panel {
 
         Table containerTable = new Table(skin);
         containerTable.background("container");
-        containerTable.add(buildingName).minSize(0).prefSize(width * .1f, height * .08f).left().row();
+        containerTable.add(buildingName).colspan(2).minSize(0).prefSize(width * .5f, height * .08f).left().row();
         containerTable.add(container).minSize(0).prefSize(width * .5f, height * .3f);
         containerTable.pad(4);
 
@@ -38,16 +40,24 @@ public class BuildingInfoPanel implements Panel {
         labelTable.setBackground("container");
         labelTable.add(floorLabel).minSize(0).prefSize(width * .35f, height * .1f);
         labelTable.add(floor).minSize(0).prefSize(width * .35f, height * .1f).row();
-        labelTable.add(buildingInfo).colspan(2).minSize(0).prefSize(width * .35f, height * .3f);
+        labelTable.add(buildingInfo).colspan(2).minSize(0).prefSize(width * .65f, height * .6f);
         labelTable.pad(5);
 
         infoTable = new Table(skin);
+        setName(Option.BUILDING_OPTION);
         infoTable.add(containerTable).minSize(0).prefSize(width * .35f, height * .3f).padBottom(5).top().left().row();
         infoTable.add(labelTable).minSize(0).prefSize(width * .35f, height * .1f);
         infoTable.setVisible(false);
         infoTable.bottom().left();
         infoTable.setName(Option.BUILDING_OPTION);
         infoTable.pad(5);
+    }
+
+    public void setContainerInfo(Image image, String name, String floorName, String description) {
+        container.setActor(image);
+        floor.setText(floorName);
+        buildingName.setText(name);
+        buildingInfo.setText(description);
     }
 
     @Override

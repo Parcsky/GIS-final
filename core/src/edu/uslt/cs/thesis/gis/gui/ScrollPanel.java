@@ -6,6 +6,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.ScrollPane;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.utils.Array;
 
+import edu.uslt.cs.thesis.gis.util.constant.Option;
+
 public class ScrollPanel implements Panel {
 
     public List<String> list;
@@ -23,6 +25,7 @@ public class ScrollPanel implements Panel {
         pane.setupOverscroll(20, 30, 200f);
         pane.setOverscroll(false, true);
         pane.setVisible(false);
+        setName(Option.SCROLL_OPTION);
     }
 
     public void addItem(String name) {
@@ -75,7 +78,4 @@ public class ScrollPanel implements Panel {
     public void setName(String name) {
         pane.setName(name);
     }
-
-
-
 }

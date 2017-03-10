@@ -27,24 +27,14 @@ public class HUD implements HudInterface {
         hudStage = new Stage(new FillViewport(width, height));
 
         buildingInfoPanel = new BuildingInfoPanel(skin, width, height);
-        buildingInfoPanel.setName(Option.BUILDING_OPTION);
-
         navigationPanel = new NavigationPanel(skin, width, height);
-        navigationPanel.setName(Option.NAVIGATION_OPTION);
-
         terrainPanel = new TerrainPanel(skin, width, height);
-        terrainPanel.setName(Option.TERRAIN_OPTION);
-
         zoomPanel = new ZoomPanel(skin, width, height);
-        zoomPanel.setName(Option.ZOOM_OPTION);
-
         scrollPanel = new ScrollPanel(skin, "default");
-        scrollPanel.setName(Option.SCROLL_OPTION);
         scrollPanel.vScrollSize(15, 15);
         scrollPanel.vKnobSize(5, 5);
 
         menuPanel = new MenuPanel(skin);
-        menuPanel.setName(Option.MENU_OPTION);
 
         Stack stack = new Stack();
         stack.setName("stack");

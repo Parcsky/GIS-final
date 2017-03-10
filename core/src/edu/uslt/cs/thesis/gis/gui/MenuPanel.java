@@ -5,6 +5,8 @@ import com.badlogic.gdx.scenes.scene2d.ui.ImageTextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 
+import edu.uslt.cs.thesis.gis.util.constant.Option;
+
 public class MenuPanel implements Panel {
 
     private Table menuTable;
@@ -14,6 +16,7 @@ public class MenuPanel implements Panel {
         menuTable.setBackground("container");
         menuTable.setVisible(false);
         menuTable.pad(5);
+        setName(Option.MENU_OPTION);
 
         String[][] buttonText = {{"Building Info", "Terrain Info", "Quit"}, {"default", "setting-btn", "exit-btn"}};
 
@@ -26,11 +29,9 @@ public class MenuPanel implements Panel {
         }
     }
 
-    public Actor getChildren(String name) {
-        for (int i = 0; i < size(); i++) {
-            if (menuTable.getChildren().get(i).getName().equals(name)) {
-                return menuTable.getChildren().get(i);
-            }
+    public Actor getChildren(Actor actor) {
+        if (menuTable.getChildren().contains(actor, true)) {
+            return actor;
         }
         return null;
     }

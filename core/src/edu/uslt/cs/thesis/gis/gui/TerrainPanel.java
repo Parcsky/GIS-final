@@ -9,6 +9,7 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Scaling;
 
 import edu.uslt.cs.thesis.gis.control.TerrainOptionListener;
+import edu.uslt.cs.thesis.gis.util.constant.Option;
 
 public class TerrainPanel implements Panel {
 
@@ -36,7 +37,7 @@ public class TerrainPanel implements Panel {
             checkBoxList.add(checkbox);
             table.add(checkbox).minSize(0).prefSize(width * .22f, height * .05f).pad(2).left().row();
         }
-
+        setName(Option.TERRAIN_OPTION);
         table.bottom().center();
         table.setVisible(false);
         table.pad(5);
