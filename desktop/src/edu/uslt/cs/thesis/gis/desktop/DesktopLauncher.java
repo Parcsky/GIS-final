@@ -9,9 +9,10 @@ public class DesktopLauncher {
 
     public static void main(String[] arg) {
         LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
-        config.title = "Geographical Information System: University of Saint Louis Campus";
-        config.width = 673;
-        config.height = 616;
+        config.title = "Geographical Information System";
+        config.width = 580;
+        config.height = 480;
+        config.resizable = false;
         new LwjglApplication(new GIS(), config);
     }
 }
