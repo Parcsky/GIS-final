@@ -6,6 +6,7 @@ import java.util.List;
 public class Path {
 
     private List<Node> steps = new ArrayList<Node>();
+    private float distance;
 
     public void add(Node node) {
         steps.add(node);
@@ -20,5 +21,13 @@ public class Path {
 
     public boolean contain(Node node) {
         return steps.contains(node);
+    }
+
+    public float getDistance() {
+        return distance;
+    }
+
+    public void setDistance(float distance) {
+        this.distance = distance;
     }
 }

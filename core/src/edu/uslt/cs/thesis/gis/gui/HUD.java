@@ -8,8 +8,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Stack;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.FillViewport;
 
-import edu.uslt.cs.thesis.gis.util.constant.Option;
-
 
 public class HUD implements HudInterface {
 
@@ -33,7 +31,6 @@ public class HUD implements HudInterface {
         scrollPanel = new ScrollPanel(skin, "default");
         scrollPanel.vScrollSize(15, 15);
         scrollPanel.vKnobSize(5, 5);
-
         menuPanel = new MenuPanel(skin);
 
         Stack stack = new Stack();
@@ -58,7 +55,7 @@ public class HUD implements HudInterface {
 
     @Override
     public void resize(int width, int height) {
-        hudStage.getViewport().update(width, height);
+        hudStage.getViewport().update(width, height, true);
     }
 
     @Override
