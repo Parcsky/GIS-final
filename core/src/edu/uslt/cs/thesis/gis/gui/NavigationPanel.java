@@ -44,7 +44,7 @@ public class NavigationPanel implements Panel {
         distanceTable.add(distanceLabel).minSize(0).prefWidth(width * .3f).padLeft(4);
         distanceTable.add(timeLabel).minSize(0).prefWidth(width * .3f);
         distanceTable.left();
-
+        distanceTable.debug();
 
         table.add(menuList).top().left().minSize(5).prefSize(menuList.getPrefWidth(), 30).pad(5);
         table.add(distanceTable).minSize(5).prefSize(width * .5f, height * .2f).fillX().spaceRight(width * .1f);
@@ -53,11 +53,14 @@ public class NavigationPanel implements Panel {
 
     public void setTimeAndDistance(float distance, float time) {
         distanceLabel.setText("Distance " + " " + (int) distance + " m");
-        String strTime = (int) time + " sec";
+        String strTime;
+        float minute = time;
+        strTime = (int) minute + " sec";
         if (time >= 60) {
-            time = time / 60;
-            strTime = (int) time + " min";
+            minute = time / 60;
+            strTime = (int) minute + " min";
         }
+
         timeLabel.setText("Time " + " " + strTime);
     }
 

@@ -32,7 +32,7 @@ public class BuildingInfoPanel implements Panel {
 
         Table containerTable = new Table(skin);
         containerTable.background("container");
-        containerTable.add(buildingName).colspan(2).minSize(0).prefSize(width * .5f, height * .08f).left().row();
+        containerTable.add(buildingName).colspan(2).minSize(0).prefSize(width * .5f, height * .1f).left().row();
         containerTable.add(container).minSize(0).prefSize(width * .5f, height * .3f);
         containerTable.pad(4);
 
