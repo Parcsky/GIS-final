@@ -3,112 +3,112 @@ building.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-aloysiusbldg
+aloysiuss
   rotate: false
   xy: 1, 1507
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-cfcbldg
-  rotate: false
-  xy: 503, 1507
-  size: 500, 500
-  orig: 500, 500
-  offset: 0, 0
-  index: -1
-charlespieters
-  rotate: false
-  xy: 1005, 1507
-  size: 500, 500
-  orig: 500, 500
-  offset: 0, 0
-  index: -1
-cicmbldg
-  rotate: false
-  xy: 1507, 1507
-  size: 500, 500
-  orig: 500, 500
-  offset: 0, 0
-  index: -1
-cicmdistrichouse
+boardroom
   rotate: false
   xy: 1, 1005
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-constantjurgens
+bulwagang
   rotate: false
-  xy: 503, 1005
+  xy: 503, 1507
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-lecarosgate
-  rotate: false
-  xy: 1005, 1005
-  size: 500, 500
-  orig: 500, 500
-  offset: 0, 0
-  index: -1
-mainentrance
-  rotate: false
-  xy: 1507, 1005
-  size: 500, 500
-  orig: 500, 500
-  offset: 0, 0
-  index: -1
-maryimmaculatedorm
+canteen
   rotate: false
   xy: 1, 503
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-mbuilding
+ccis
   rotate: false
-  xy: 503, 503
+  xy: 503, 1005
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-nbuilding
+cebemobuilding
   rotate: false
-  xy: 1005, 503
+  xy: 1005, 1507
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-obuilding
-  rotate: false
-  xy: 1507, 503
-  size: 500, 500
-  orig: 500, 500
-  offset: 0, 0
-  index: -1
-outdoorstage
+charlespieter
   rotate: false
   xy: 1, 1
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-pbuilding
+church
+  rotate: false
+  xy: 503, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+cicm-building
+  rotate: false
+  xy: 1005, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+dbuilding
+  rotate: false
+  xy: 1507, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+districthouse
   rotate: false
   xy: 503, 1
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-pjpbuilding
+E-room
+  rotate: false
+  xy: 1005, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+e37
+  rotate: false
+  xy: 1507, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+elementary
   rotate: false
   xy: 1005, 1
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-qbuilding
+emc
+  rotate: false
+  xy: 1507, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+entrance
   rotate: false
   xy: 1507, 1
   size: 500, 500
@@ -120,87 +120,155 @@ building2.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-sanjacintobldg
+gym
   rotate: false
   xy: 1, 1507
-  size: 752, 500
-  orig: 752, 500
+  size: 500, 500
+  orig: 500, 500
   offset: 0, 0
   index: -1
-slrbuilding
+highscool
   rotate: false
   xy: 1, 1005
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-sportsfield
+j-room
   rotate: false
-  xy: 755, 1507
+  xy: 503, 1507
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-theophileverbistbldg
-  rotate: false
-  xy: 1257, 1507
-  size: 500, 500
-  orig: 500, 500
-  offset: 0, 0
-  index: -1
-tjollehotel
+kbuilding
   rotate: false
   xy: 1, 503
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-Untitled-1
+library
   rotate: false
   xy: 503, 1005
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-Untitled-3
+mbuilding
+  rotate: false
+  xy: 1005, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+nbuilding
   rotate: false
   xy: 1, 1
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-Untitled-4
+openstage
   rotate: false
   xy: 503, 503
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-Untitled-6
+phase1
   rotate: false
   xy: 1005, 1005
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-Untitled-7
+phase2
+  rotate: false
+  xy: 1507, 1507
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+phase4 (2)
   rotate: false
   xy: 503, 1
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-uslchapel
+playground
   rotate: false
   xy: 1005, 503
   size: 500, 500
   orig: 500, 500
   offset: 0, 0
   index: -1
-uslgym
+popejohn
+  rotate: false
+  xy: 1507, 1005
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+qbuilding
   rotate: false
   xy: 1005, 1
   size: 500, 500
   orig: 500, 500
+  offset: 0, 0
+  index: -1
+registrar-office
+  rotate: false
+  xy: 1507, 503
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+sanjacinto
+  rotate: false
+  xy: 1507, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+
+building3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+tjolehotel
+  rotate: false
+  xy: 1, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+verbist
+  rotate: false
+  xy: 503, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+vp-acadeem
+  rotate: false
+  xy: 1005, 1
+  size: 500, 500
+  orig: 500, 500
+  offset: 0, 0
+  index: -1
+accounting
+  rotate: false
+  xy: 1507, 251
+  size: 250, 250
+  orig: 250, 250
+  offset: 0, 0
+  index: -1
+aloysius
+  rotate: false
+  xy: 1759, 251
+  size: 250, 250
+  orig: 250, 250
   offset: 0, 0
   index: -1
