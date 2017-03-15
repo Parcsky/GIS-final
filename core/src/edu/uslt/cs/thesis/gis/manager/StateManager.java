@@ -22,7 +22,7 @@ public class StateManager {
     }
 
     public void remove(State state) {
-        states.pop();
+        states.remove(state);
     }
 
     public void update() {

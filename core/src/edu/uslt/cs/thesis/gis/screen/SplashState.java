@@ -1,5 +1,7 @@
 package edu.uslt.cs.thesis.gis.screen;
 
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.viewport.FillViewport;
@@ -17,7 +19,8 @@ public class SplashState extends State implements Runnable {
         Image uslBanner = Assets.instance().getSplash().uslBanner;
         Image uslLogo = Assets.instance().getSplash().uslLogo;
 
-        Splash bannerSplash = new Splash(uslBanner, 0, 0, gis.width, gis.height);
+        float bannerHeight = gis.height / 2 - uslBanner.getHeight() / 2;
+        Splash bannerSplash = new Splash(uslBanner, 0, bannerHeight, gis.width, uslBanner.getHeight());
         Splash logoSplash = new Splash(uslLogo, 0, 0, gis.width, gis.height);
 
         bannerSplash.setRunnable(false);
@@ -38,6 +41,8 @@ public class SplashState extends State implements Runnable {
 
     @Override
     public void render() {
+        Gdx.gl.glClearColor(1f, 1f, 1f, 1f);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         stage.draw();
     }
 

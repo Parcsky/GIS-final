@@ -8,8 +8,6 @@ import com.badlogic.gdx.scenes.scene2d.ui.Stack;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.FillViewport;
 
-import edu.uslt.cs.thesis.gis.util.constant.Option;
-
 
 public class HUD implements HudInterface {
 
@@ -33,7 +31,6 @@ public class HUD implements HudInterface {
         scrollPanel = new ScrollPanel(skin, "default");
         scrollPanel.vScrollSize(15, 15);
         scrollPanel.vKnobSize(5, 5);
-
         menuPanel = new MenuPanel(skin);
 
         Stack stack = new Stack();
@@ -43,12 +40,13 @@ public class HUD implements HudInterface {
 
         table = new Table();
         table.setFillParent(true);
-        table.add(navigationPanel.getTable()).minSize(0).colspan(2).prefSize(width, height * .08f).pad(2).top().row();
+        table.add(navigationPanel.getTable()).minSize(0).colspan(2).prefSize(width, height * .07f).pad(2).top().row();
         table.add(menuPanel.getTable()).minSize(0).prefSize(width * .35f, height * .25f).pad(2).top().left();
         table.add(stack).minSize(0).prefSize(width * .35f, height * .45f).top().right().pad(0, 5, 5, 5).row();
         table.add(buildingInfoPanel.getTable()).minSize(0).prefSize(width * .4f, height * .5f).bottom().left();
         table.add(terrainPanel.getTable()).minSize(0).prefSize(width * .25f, height * .25f).pad(5).bottom().right();
         table.top();
+        debug();
     }
 
     @Override
@@ -58,7 +56,7 @@ public class HUD implements HudInterface {
 
     @Override
     public void resize(int width, int height) {
-        hudStage.getViewport().update(width, height);
+        hudStage.getViewport().update(width, height, true);
     }
 
     @Override

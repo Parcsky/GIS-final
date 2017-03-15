@@ -4,9 +4,9 @@ package edu.uslt.cs.thesis.gis.algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-import edu.uslt.cs.thesis.gis.util.constant.Direction;
 import edu.uslt.cs.thesis.gis.map.TileMap;
 import edu.uslt.cs.thesis.gis.map.TiledMapStage;
+import edu.uslt.cs.thesis.gis.util.constant.Direction;
 
 public class AStarPathFinder implements PathFinder {
 
@@ -26,10 +26,10 @@ public class AStarPathFinder implements PathFinder {
     @Override
     public Path findPath(int startX, int startY, int goalX, int goalY) {
         clearNodes();
-        if (startX <= 0 && startX > nodes.length && startY <=0 && startY > nodes.length) return null;
-        Node goal = nodes[goalX][goalY];
+        if (startX < 0 || startX > nodes.length || startY < 0 || startY > nodes[1].length)
+            return null;
         Node current = nodes[startX][startY];
-
+        Node goal = nodes[goalX][goalY];
         open.add(current);
         while (!open.isEmpty()) {
 
@@ -38,13 +38,17 @@ public class AStarPathFinder implements PathFinder {
             close.add(current);
 
             if (current == goal) {
+                float distance = 0;
                 Path path = new Path();
+
                 while (current != null) {
+                    distance += 2;
                     path.add(current);
                     if (current.arrow != null) current.arrow.setVisible(true);
                     current = current.parent;
 
                 }
+                path.setDistance(distance);
                 return path;
             }
             // neighbors of current
@@ -97,10 +101,7 @@ public class AStarPathFinder implements PathFinder {
     }
 
     private boolean isDiagonal(int x, int y) {
-        return (x == -1 && y == 1 ||
-                x == 1 && y == 1 ||
-                x == 1 && y == -1 ||
-                x == -1 && y == -1);
+        return (x == -1 && y == 1 || x == 1 && y == 1 || x == 1 && y == -1 || x == -1 && y == -1);
     }
 
     private float movementCost(float cost, boolean diagonal) {

@@ -2,6 +2,7 @@ package edu.uslt.cs.thesis.gis.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.utils.viewport.FillViewport;
 
@@ -16,19 +17,16 @@ import edu.uslt.cs.thesis.gis.map.TiledMapStage;
 public class MainState extends State {
 
     private TiledMapStage mapStage;
-    private SaintLouisMap uslMap;
     private HUD hud;
 
     public MainState(GIS gis) {
         super(gis);
         mapStage = gis.getMapStage();
-        uslMap = gis.getUslMap();
+        SaintLouisMap uslMap = gis.getUslMap();
 
         hud = new HUD(gis.hudSkin, gis.width, gis.height);
         hud.addListener(new HudListener(gis, hud));
         hud.display();
-
-        GisListener gisListener = new GisListener(gis, hud);
 
         OrthographicCamera camera = new OrthographicCamera();
         camera.setToOrtho(false, gis.width, gis.height);
@@ -38,9 +36,9 @@ public class MainState extends State {
         hud.getTerrainPanel().addListener(terrainListener);
 
         mapStage.setViewport(new FillViewport(gis.width, gis.height, camera));
+        mapStage.addListener( new GisListener(gis, hud));
         mapStage.addActor(gis.getMarker().getObject());
-        mapStage.addListener(gisListener);
-
+        mapStage.getStage().getViewport().update(gis.width, gis.height);
         uslMap.setCam(mapStage.getCamera());
 
         InputMultiplexer inputMultiplexer = new InputMultiplexer();
@@ -57,6 +55,9 @@ public class MainState extends State {
 
     @Override
     public void render() {
+        Gdx.gl.glClearColor(.25f, .25f, .25f, .25f);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
         gis.getUslMap().render();
 
         mapStage.getViewport().apply();

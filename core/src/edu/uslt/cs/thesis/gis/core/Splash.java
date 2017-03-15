@@ -14,13 +14,9 @@ import static com.badlogic.gdx.scenes.scene2d.actions.Actions.scaleTo;
 public class Splash{
     private Image image;
     private boolean runnable;
-    private int x;
-    private int y;
 
-    public Splash(Image image, int x, int y, float width, float height) {
+    public Splash(Image image, float x,float y, float width, float height) {
         this.image = image;
-        this.x = x;
-        this.y = y;
         image.setSize(width, height);
         image.setOrigin(image.getWidth() / 2, image.getHeight() / 2);
         image.setPosition(x, y);

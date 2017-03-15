@@ -4,17 +4,16 @@ import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 
 import edu.uslt.cs.thesis.gis.manager.BuildingManager;
 import edu.uslt.cs.thesis.gis.manager.StateManager;
 import edu.uslt.cs.thesis.gis.map.SaintLouisMap;
-import edu.uslt.cs.thesis.gis.map.TileMap;
 import edu.uslt.cs.thesis.gis.map.TiledMapStage;
 import edu.uslt.cs.thesis.gis.object.LocationMarker;
 import edu.uslt.cs.thesis.gis.resource.Assets;
 import edu.uslt.cs.thesis.gis.screen.MainState;
+import edu.uslt.cs.thesis.gis.screen.SplashState;
 import edu.uslt.cs.thesis.gis.util.JsonObjectBuilder;
 
 public class GIS extends ApplicationAdapter {
@@ -32,11 +31,10 @@ public class GIS extends ApplicationAdapter {
     @Override
     public void create() {
         Assets.instance().init(new AssetManager());
-
         width = Gdx.graphics.getWidth();
         height = Gdx.graphics.getHeight();
-        buildingManager = new BuildingManager();
 
+        buildingManager = new BuildingManager();
         JsonObjectBuilder jsonObjectBuilder = new JsonObjectBuilder("data/info.json");
         jsonObjectBuilder.build(buildingManager.getBuildings(), "buildings");
 
@@ -53,9 +51,6 @@ public class GIS extends ApplicationAdapter {
 
     @Override
     public void render() {
-        Gdx.gl.glClearColor(.54f, .55f, .60f, .5f);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
         stateManager.update();
         stateManager.render();
     }
