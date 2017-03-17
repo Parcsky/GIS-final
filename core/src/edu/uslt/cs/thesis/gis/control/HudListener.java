@@ -40,7 +40,6 @@ public class HudListener extends ClickListener {
     @Override
     public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         if (event.getTarget().equals(list)) {
-            System.out.println(getTapCount());
             return super.touchDown(event, x, y, pointer, button);
         }
         if (event.getTarget().equals(menuList)) {

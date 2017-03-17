@@ -46,7 +46,7 @@ public class GIS extends ApplicationAdapter {
         marker.setBounds(uslMap.getWidth() / 2, uslMap.getHeight() / 2, 50, 50);
 
         stateManager = new StateManager();
-        stateManager.add(new MainState(this));
+        stateManager.add(new SplashState(this));
     }
 
     @Override

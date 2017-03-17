@@ -55,7 +55,7 @@ public class MainState extends State {
 
     @Override
     public void render() {
-        Gdx.gl.glClearColor(.25f, .25f, .25f, .25f);
+        Gdx.gl.glClearColor(1f,1f,1f,1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         gis.getUslMap().render();

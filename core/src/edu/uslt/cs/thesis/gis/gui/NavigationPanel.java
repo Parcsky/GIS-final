@@ -29,9 +29,8 @@ public class NavigationPanel implements Panel {
         search = new TextField("", skin, "search-little");
         search.setAlignment(Align.center);
         search.getStyle().cursor.setMinHeight(3);
-        search.getStyle().cursor.setMinWidth(5);
+        search.getStyle().cursor.setMinWidth(4);
         search.setBlinkTime(.55f);
-        search.getStyle().font = FontGenerator.generate("font/molten.ttf", .05f);
         search.setAlignment(Align.left);
 
         menuList = new Button(skin, "hide-list");
@@ -44,23 +43,16 @@ public class NavigationPanel implements Panel {
         distanceTable.add(distanceLabel).minSize(0).prefWidth(width * .3f).padLeft(4);
         distanceTable.add(timeLabel).minSize(0).prefWidth(width * .3f);
         distanceTable.left();
-        distanceTable.debug();
 
         table.add(menuList).top().left().minSize(5).prefSize(menuList.getPrefWidth(), 30).pad(5);
         table.add(distanceTable).minSize(5).prefSize(width * .5f, height * .2f).fillX().spaceRight(width * .1f);
-        table.add(search).top().right().minSize(5).prefSize(width / 3, 40).pad(5);
+        table.add(search).top().right().minSize(5).prefSize(width / 3, 40);
+        table.pad(3);
     }
 
     public void setTimeAndDistance(float distance, float time) {
         distanceLabel.setText("Distance " + " " + (int) distance + " m");
-        String strTime;
-        float minute = time;
-        strTime = (int) minute + " sec";
-        if (time >= 60) {
-            minute = time / 60;
-            strTime = (int) minute + " min";
-        }
-
+        String strTime = (int)time+ " sec";
         timeLabel.setText("Time " + " " + strTime);
     }
 

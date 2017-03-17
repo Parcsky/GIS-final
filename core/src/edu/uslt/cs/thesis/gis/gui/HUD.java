@@ -40,13 +40,12 @@ public class HUD implements HudInterface {
 
         table = new Table();
         table.setFillParent(true);
-        table.add(navigationPanel.getTable()).minSize(0).colspan(2).prefSize(width, height * .07f).pad(2).top().row();
+        table.add(navigationPanel.getTable()).minSize(0).colspan(2).prefSize(width, height * .1f).pad(2).top().row();
         table.add(menuPanel.getTable()).minSize(0).prefSize(width * .35f, height * .25f).pad(2).top().left();
         table.add(stack).minSize(0).prefSize(width * .35f, height * .45f).top().right().pad(0, 5, 5, 5).row();
-        table.add(buildingInfoPanel.getTable()).minSize(0).prefSize(width * .4f, height * .5f).bottom().left();
+        table.add(buildingInfoPanel.getTable()).minSize(0).prefSize(width * .5f, height * .9f).bottom().left();
         table.add(terrainPanel.getTable()).minSize(0).prefSize(width * .25f, height * .25f).pad(5).bottom().right();
         table.top();
-        debug();
     }
 
     @Override

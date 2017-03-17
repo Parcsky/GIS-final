@@ -4,6 +4,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 import com.badlogic.gdx.scenes.scene2d.ui.List;
+import com.badlogic.gdx.scenes.scene2d.ui.TextField;
 import com.badlogic.gdx.scenes.scene2d.utils.ActorGestureListener;
 
 import edu.uslt.cs.thesis.gis.algorithm.AStarPathFinder;
@@ -27,6 +28,7 @@ public class GisListener extends ActorGestureListener {
     private List<String> list;
     private GisObject marker;
     private TileMap uslMap;
+    private TextField search;
 
     private BuildingInfoPanel infoPanel;
     private NavigationPanel navigation;
@@ -39,16 +41,15 @@ public class GisListener extends ActorGestureListener {
     private Path path;
 
     private Vector3 tp = new Vector3();
-    private GIS gis;
     private float viewPortHalfX;
     private float viewPortHalfY;
 
     public GisListener(GIS gis, HUD hud) {
-        this.gis = gis;
         navigation = hud.getNavigationPanel();
         infoPanel = hud.getBuildingInfoPanel();
         buildingManager = gis.buildingManager;
         marker = gis.getMarker();
+        search= hud.getNavigationPanel().search;
         uslMap = gis.getUslMap();
         list = hud.getScrollPanel().list;
         list.addListener(this);
@@ -86,16 +87,18 @@ public class GisListener extends ActorGestureListener {
 
     @Override
     public void tap(InputEvent event, float x, float y, int count, int button) {
+
         if (event.getTarget().equals(list)) {
             Building building = buildingManager.get(list.getSelected());
-
             startX = (int) (marker.getX() / 16 + marker.getWidth() / 2 / 16);
             startY = (int) (marker.getY() / 16 + marker.getHeight() / 2 / 16);
             goalX = (int) building.getX() / 16;
             goalY = (int) building.getY() / 16;
-
+            search.setText(building.getName());
             path = pathFinder.findPath(startX, startY, goalX, goalY);
-            infoPanel.setContainerInfo(building.getObject(), building.getName(), building.getFloor(), "info");
+            if(path == null) return;
+            navigation.setTimeAndDistance(path.getDistance(), Physics.time(path.getDistance(), 1.4f));
+            infoPanel.setContainerInfo(building.getObject(), building.getName(), building.getFloor(),building.getInfo());
         }
     }
 }

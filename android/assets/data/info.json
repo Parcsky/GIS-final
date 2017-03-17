@@ -2,778 +2,878 @@
   buildings:
   [
     {
+      room:"University of Saint Louis",
+      visual: "entrance",
+      floor: 0,
+      X: 816,
+      Y: 1280,
+      info:"UNIVERSITY OF SAINT LOUIS is one of the five CICM institutions of higher learning which aim at preparing the youth in becoming mature Christians and citizens whose only pride will be to serve well their God and Country."
+    },
+    {
       room:"Elementary Clinic",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 1,
       X: 749,
       Y: 1375,
-
+      info:"A healthcare facility that is primarily focused on the care of children"
     },
     {
       room:"Elementary Principal's office",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 1,
       X: 749,
       Y: 1375,
+      info:"Elementary Principal's office"
     },
     {
       room:"Elementary Guidance Office",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 1,
       X: 749,
       Y: 1375,
+      info:""
     },
 
     {
-      room:"A12, A13, A14, A15 (DKLC Classrooms)",
-      visual: "constantjurgens",
+      room:"A12, A13, A14, A15",
+      visual: "elementary",
       floor:1,
       X: 749,
       Y: 1375,
+      info:" (DKLC Classrooms)"
     },
 
     {
-      room:"A16, A17 Kindergarten/Preschool Classroom)",
-      visual: "constantjurgens",
+      room:"A16, A17",
+      visual: "elementary",
       floor:1,
       X: 749,
       Y: 1375,
+      info:"Kindergarten/Preschool Classroom"
     },
 
     {
-      room:"A18 (Elementary Audio Visual Room)",
-      visual: "constantjurgens",
+      room:"A18",
+      visual: "elementary",
       floor:1,
-      X: 749,
-      Y: 1375,
+      X: 688.0,
+      Y: 1376.0,
+      info:"Elementary Audio Visual Room"
     },
 
     {
       room:"Grade school Library",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor:1,
       X: 749,
       Y: 1375,
+      info:"Library for elementary students"
     },
 
     {
       room:"Elementary Audio-Visual Room",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor:2,
-      X: 775,
-      Y: 1405,
+      X: 688.0,
+      Y: 1376.0,
+      info:""
 
     },
 
     {
       room:"Elementary Kitchen Laboratory",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 2,
-      X: 775,
-      Y: 1405,
-
+      X: 688.0,
+      Y: 1376.0,
+      info:""
     },
 
     {
       room:"Elementary HELE Room",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 2,
       X: 749,
       Y: 1375,
+      info:""
     },
 
     {
       room:"Elementary Faculty Room",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 2,
       X: 749,
       Y: 1375,
+      info:""
     },
 
     {
-      room:"A27 (Elementary Study Room)",
-      visual: "constantjurgens",
+      room:"A27",
+      visual: "elementary",
       floor: 2,
       X: 749,
       Y: 1375,
+      info:"Elementary Study Room"
     },
 
     {
-      room:"A22, A23, A24, A25, A26 (Elementary Classrooms)",
-      visual: "constantjurgens",
+      room:"A22, A23, A24, A25, A26",
+      visual: "elementary",
       floor: 2,
       X: 749,
       Y: 1375,
+      info:"Elementary Classrooms"
     },
 
     {
       room:"Elementary Coordinators' Office",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 2,
       X: 749,
       Y: 1375,
+      info:""
     },
 
     {
-      room:"A31, A32, A33, A34, A35, A36, A37 (Elementary Classrooms)",
-      visual: "constantjurgens",
+      room:"A31, A32, A33, A34, A35, A36, A37",
+      visual: "elementary",
       floor: 3,
       X: 749,
       Y: 1375,
+      info:"Elementary Classrooms"
     },
 
     {
-      room:"A38 (Elementary Computer Laboratory)",
-      visual: "constantjurgens",
+      room:"A38 ",
+      visual: "elementary",
       floor: 3,
       X: 749,
       Y: 1375,
+      info:"Elementary Computer Laboratory"
     },
 
     {
       room:"Elementary Supreme Pupil Government",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 3,
       X: 749,
       Y: 1375,
+      info:""
     },
 
     {
       room:"Elementary Science Library",
-      visual: "constantjurgens",
+      visual: "elementary",
       floor: 3,
       X: 749,
       Y: 1375,
+      info:""
     },
 
     {
-      room:"B11 (Electronics Room/GE Laboratory)",
-      visual: "constantjurgens",
+      room:"B11",
+      visual: "cebemobuilding",
       floor: 3,
-      X: 296,
-      Y: 1392,
+      X: 192.0,
+      Y: 1376.0,
+      info:"Electronics Room/GE Laboratory"
     },
 
     {
-      room:"B12 (Electrical Laboratory)",
-      visual: "pbuilding",
+      room:"B12",
+      visual: "cebemobuilding",
       floor: 1,
-      X: 296,
-      Y: 1392,
+      X: 256.0,
+      Y: 1376.0,
+      info:"Electrical Laboratory"
     },
 
     {
-      room:"B13, B13b (Classrooms)",
-      visual: "pbuilding",
+      room:"B13, B13b",
+      visual: "cebemobuilding",
       floor: 1,
-      X: 296,
-      Y: 1392,
+      X: 320.0,
+      Y: 1376.0,
+      info:"Classrooms"
     },
 
     {
       room:"Soil and Materials Testing Laboratory",
-      visual: "pbuilding",
+      visual: "sanjacinto",
       floor: 1,
-      X: 296,
-      Y: 1392,
+      X: 368.0,
+      Y: 1376.0,
+      info:""
     },
 
     {
-      room:"C16, C16a, C17, C18 (College Classrooms)",
-      visual: "sanjacintobldg",
+      room:"C16, C16a, C17, C18",
+      visual: "sanjacinto",
       floor: 1,
       X: 532,
       Y: 1232,
-
+      info:"College Classrooms"
     },
 
     {
-      room:"University Research Center (URC) Office",
-      visual: "sanjacintobldg",
+      room:"University Research Center Office",
+      visual: "sanjacinto",
       floor: 1,
       X: 582,
       Y: 1293,
+      info:"URC)"
     },
 
     {
       room:"College Female Coordinators Office",
-      visual: "sanjacintobldg",
+      visual: "sanjacinto",
       floor: 1,
-      X: 545,
-      Y: 1266,
+      X: 528.0,
+      Y: 1264.0,
+      info:""
     },
 
     {
-      room:"Community Extension Services Office/Alumni Coordinator's Office",
-      visual: "sanjacintobldg",
+      room:"Community Extension Services Office",
+      visual: "sanjacinto",
       floor: 1,
-      X: 144,
-      Y: 915,
+      X: 528.0,
+      Y: 1232.0,
+      info:"Alumni Coordinator's Office"
     },
 
     {
       room:"Postal Office",
-      visual: "sanjacintobldg",
+      visual: "sanjacinto",
       floor: 1,
-      X: 545,
-      Y: 1266,
+      X: 528.0,
+      Y: 1248.0,
+      info:""
     },
 
     {
-      room:"Office of Student Affairs Office (SAO)",
-      visual: "sanjacintobldg",
+      room:"Office of Student Affairs Office",
+      visual: "sanjacinto",
       floor: 1,
-      X: 545,
-      Y: 1266,
+      X: 528.0,
+      Y: 1312.0,
+      info:"SAO"
     },
 
     {
-      room:"C21 (Drafting Room)",
-      visual: "sanjacintobldg",
+      room:"C21",
+      visual: "sanjacinto",
       floor: 1,
-      X: 545,
-      Y: 1266,
+      X: 480.0,
+      Y: 1216.0,
+      info:"Drafting Room"
     },
     {
-      room:"C22, C23, C23a, C24, C25,C25a (Classrooms)",
-      visual: "sanjacintobldg",
+      room:"C22, C23, C23a, C24, C25,C25a ",
+      visual: "sanjacinto",
       floor: 2,
-      X: 545,
-      Y: 1266,
+      X: 528.0,
+      Y: 1312.0,
+      info:"Classrooms"
     },
 
     {
       room:"College Guidance Office",
-      visual: "sanjacintobldg",
+      visual: "sanjacinto",
       floor: 2,
-      X: 545,
-      Y: 1266,
+      X: 496.0,
+      Y: 1360.0,
+      info:""
     },
     {
-      room:"D11, D12, D13, D14 (Classrooms)",
-      visual: "slrbuilding",
+      room:"D11, D12, D13, D14",
+      visual: "dbuilding",
       floor: 2,
-      X: 348,
-      Y: 1243,
+      X: 336.0,
+      Y: 1216.0,
+      info:"Classrooms"
     },
 
     {
       room:"D21, D22, D23, D24",
-      visual: "slrbuilding",
+      visual: "dbuilding",
       floor: 1,
-      X: 348,
-      Y: 1243,
+      X: 432.0,
+      Y: 1248.0,
+      info:""
     },
 
     {
       room:"SEAID Dean's Office",
-      visual: "cicmbldg",
+      visual: "cicm-building",
       floor: 2,
-      X: 526,
-      Y: 1092,
+      X: 432.0,
+      Y: 1056.0,
+      info:""
     },
 
     {
       room:"SBAA Dean's Office",
-      visual: "cicmbldg",
+      visual: "cicm-building",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 400.0,
+      Y: 1056.0,
+      info:""
     },
 
     {
       room:"Office of the Human Resource Management Officer ",
-      visual: "cicmbldg",
+      visual: "cicm-building",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 480.0,
+      Y: 1056.0,
+      info:""
     },
 
     {
       room:"Office of the Vice President for Administration",
-      visual: "cicmbldg",
+      visual: "cicm-building",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 448.0,
+      Y: 1056.0,
+      info:""
     },
     {
       room:"Office of University President",
-      visual: "cicmbldg",
+      visual: "cicm-building",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 448.0,
+      Y: 1056.0,
+      info:""
     },
 
     {
       room:"Sacred Heart Board Room",
-      visual: "cicmbldg",
+      visual: "boardroom",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 480.0,
+      Y: 1056.0,
+      info:""
     },
 
     {
       room:"Office of the Vice President for Academics",
-      visual: "cicmbldg",
+      visual: "vp-acadeem",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 448.0,
+      Y: 1056.0,
+      info:""
     },
 
     {
       room:"NSTP Office",
-      visual: "cicmbldg",
+      visual: "vp-acadeem",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 400.0,
+      Y: 1056.0,
+      info:""
     },
 
     {
       room:"SEAS Dean's Office",
-      visual: "cicmbldg",
+      visual: "cicm-building",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 512.0,
+      Y: 1056.0,
+      info:""
     },
     {
       room:"E21, E22, E23, E24, E25, E26, E27",
-      visual: "cicmbldg",
+      visual: "E-room",
       floor: 1,
-      X: 526,
-      Y: 1092,
+      X: 512.0,
+      Y: 1056.0,
+      info:"Classrooms"
     },
     {
       room:"E31, E32, E33, E34, E35, E36, E37",
-      visual: "cicmbldg",
+      visual: "E-room",
       floor: 2,
-      X: 526,
-      Y: 1092,
+      X: 512.0,
+      Y: 1056.0,
+      info:"Classrooms"
     },
 
     {
       room:"H11, H12, H13, H14, H15",
-      visual: "aloysiusbldg",
+      visual: "aloysius",
       floor: 3,
-      X: 511,
-      Y: 656,
+      X: 448.0,
+      Y: 640.0,
+      info:"Classrooms"
     },
 
     {
       room:"High School Faculty Room",
-      visual: "aloysiusbldg",
+      visual: "aloysius",
       floor: 1,
-      X: 511,
-      Y: 656,
+      X: 480.0,
+      Y: 640.0,
+      info:""
     },
 
     {
       room:"University Clinic",
-      visual: "aloysiusbldg",
+      visual: "aloysius",
       floor: 1,
       X: 345,
       Y: 681,
+      info:""
     },
 
     {
       room:"H21, H22, H23, H24, H25, H26",
-      visual: "aloysiusbldg",
+      visual: "aloysius",
       floor: 1,
-      X: 511,
-      Y: 656,
+      X: 448.0,
+      Y: 640.0,
+      info:"Classrooms"
     },
 
     {
-      room:"G14 (High School Tailoring Laboratory)",
-      visual: "charlespieters",
+      room:"G14",
+      visual: "phase2",
       floor: 2,
       X: 404,
       Y: 530,
+      info:"High School Tailoring Laboratory"
     },
     {
       room:"High School Food Processing Laboratory",
-      visual: "charlespieters",
+      visual: "phase2",
       floor: 1,
       X: 404,
       Y: 530,
+      info:""
     },
     {
       room:"High School SSG and SAC's Office",
-      visual: "charlespieters",
+      visual: "phase2",
       floor: 1,
       X: 404,
       Y: 530,
+      info:""
     },
     {
       room:"I102, I103, I104, I105",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:"Classroom"
     },
 
     {
       room:"High School Guidance Office",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:""
     },
     {
       room:"High School Wellness Room",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:""
     },
 
     {
       room:"High School Principal's Office",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:""
     },
     {
       room:"High School Audio-Visual Room",
-      visual:"charlespieters",
+      visual:"charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:""
     },
     {
       room:"Office of the Prefect of Discipline",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:""
     },
     {
-      room:"I112 (Mechanical Drafting Laboratory)",
-      visual: "charlespieters",
+      room:"I112",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
-    },
-
-    {
-      room:"I113 (Bread and Pastry Laboratory)",
-      visual: "charlespieters",
-      floor: 1,
-      X: 573,
-      Y: 470,
+      info:"Mechanical Drafting Laboratory"
     },
 
     {
-      room:"I202, I203, I204 (Classrooms)",
-      visual: "charlespieters",
+      room:"I113 ",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:"Bread and Pastry Laboratory"
+    },
+
+    {
+      room:"I202, I203, I204",
+      visual: "charlespieter",
+      floor: 1,
+      X: 573,
+      Y: 470,
+      info:"Classrooms"
     },
 
     {
       room:"High School Library",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 1,
       X: 573,
       Y: 470,
+      info:"Library for Highschool student"
     },
 
     {
       room:"I205, I206, I207, I208, I209,I210,I211,I212,I213,I214,I215,I216,I217,I218, I219",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 2,
       X: 573,
       Y: 470,
+      info:"Classrooms"
     },
     {
       room:"High School Computer Laboratory Rooms",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 2,
       X: 573,
       Y: 470,
+      info:""
     },
 
     {
       room:"Science Laboratory",
-      visual: "charlespieters",
+      visual: "charlespieter",
       floor: 3,
       X: 573,
       Y: 470,
+      info:""
     },
 
     {
       room:"Registrar's Office",
-      visual: "theophileverbistbldg",
+      visual: "registrar-office",
       floor: 3,
       X: 526,
       Y: 906,
+      info:"Register for something"
     },
 
     {
       room:"Office of the Vice President for Planning, Development",
-      visual: "theophileverbistbldg",
+      visual: "verbist",
       floor: 3,
       X: 526,
       Y: 906,
+      info:""
     },
 
     {
       room:"Accounting Office",
-      visual: "theophileverbistbldg",
+      visual: "accounting",
       floor: 1,
       X: 473,
       Y: 862,
+      info:"payroll services; ensuring accurate financial information "
     },
 
     {
       room:"Purchasing Office",
-      visual: "theophileverbistbldg",
+      visual: "accounting",
       floor: 1,
       X: 441,
       Y: 959,
-
+      info:"agilaku ti kumpurme"
     },
 
     {
       room:"Publications Office",
-      visual: "theophileverbistbldg",
+      visual: "accounting",
       floor: 1,
       X: 441,
       Y: 959,
+      info:"agpublish da"
     },
 
     {
       room:"Supplies Section",
-      visual: "theophileverbistbldg",
+      visual: "accounting",
       floor: 1,
       X: 441,
       Y: 959,
+      info:"agsupply ti gamit"
     },
 
     {
       room:"University Canteen",
-      visual: "theophileverbistbldg",
+      visual: "canteen",
       floor: 1,
-      X: 407,
-      Y: 879,
+      X: 384.0,
+      Y: 848.0,
+      info:""
     },
 
     {
       room:"College Library",
-      visual: "theophileverbistbldg",
+      visual: "library",
       floor: 1,
       X: 520,
       Y: 904,
-
+      info:""
     },
 
     {
       room:"CICT",
-      visual: "Untitled-7",
+      visual: "library",
       floor: 4,
       X: 497,
       Y: 904,
+      info:""
 
     },
 
     {
       room:"College Computer Laboratories",
-      visual: "Untitled-4",
+      visual: "j-room",
       floor: 4,
       X: 497,
       Y: 904,
+      info:""
     },
 
     {
       room:"SICS Faculty Room",
-      visual: "theophileverbistbldg",
+      visual: "ccis",
       floor: 4,
-      X: 381,
-      Y: 910,
+      X: 336.0,
+      Y: 880.0,
+      info:""
     },
 
     {
       room:"SICS Dean's Office",
-      visual: "Untitled-4",
+      visual: "ccis",
       floor: 4,
-      X: 381,
-      Y: 910,
+      X: 336.0,
+      Y: 880.0,
+      info:""
     },
 
     {
       room:"ECE Laboratory",
-      visual: "pbuilding",
+      visual: "kbuilding",
       floor: 1,
       X: 508,
       Y: 1390,
+      info:""
     },
 
     {
       room:"EE Laboratory",
-      visual: "pbuilding",
+      visual: "kbuilding",
       floor: 1,
       X: 508,
       Y: 1390,
+      info:""
     },
 
     {
       room:"CpE Laboratory",
-      visual: "pbuilding",
+      visual: "kbuilding",
       floor: 1,
       X: 508,
       Y: 1390,
+      info:""
     },
 
     {
       room:"ECE Tech Office",
-      visual: "pbuilding",
+      visual: "kbuilding",
       floor: 1,
       X: 508,
       Y: 1390,
+      info:""
     },
 
     {
       room:"College Biology Laboratory",
-      visual: "pbuilding",
+      visual: "kbuilding",
       floor: 2,
       X: 508,
       Y: 1390,
+      info:""
     },
 
     {
       room:"Engineering Stock Room",
-      visual: "pbuilding",
+      visual: "kbuilding",
       floor: 2,
       X: 508,
       Y: 1390,
+      info:""
     },
 
     {
       room:"(College Physics Laboratory)",
-      visual:"pbuilding",
+      visual:"kbuilding",
       floor: 2,
       X: 508,
       Y: 1390,
+      info:""
     },
 
     {
-      room:"K41, K42, K43, K44, K45 (Drafting Room)",
-      visual: "pbuilding",
+      room:"K41, K42, K43, K44, K45",
+      visual: "kbuilding",
       floor: 2,
       X: 508,
       Y: 1390,
+      info:"Drafting Room"
     },
 
     {
       room:"Tjolle International Hotel",
-      visual: "tjollehotel",
+      visual: "tjolehotel",
       floor: 3,
-      X: 480,
-      Y: 165,
+      X: 464.0,
+      Y: 192.0,
+      info:""
     },
 
     {
       room:"HRM Kitchen Lab",
-      visual: "tjollehotel",
+      visual: "tjolehotel",
       floor: 4,
-      X: 480,
-      Y: 165,
+      X: 464.0,
+      Y: 192.0,
+      info:""
     },
 
     {
       room:"SHVED & SHS Coordinator's Office",
-      visual:"tjollehotel",
+      visual:"popejohn",
       floor: 1,
-      X: 480,
-      Y: 141,
+      X: 464.0,
+      Y: 192.0,
+      info:""
     },
 
     {
       room:"Nursing Skills Laboratory",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 1,
-      X: 481,
-      Y: 108,
+      X: 464.0,
+      Y: 192.0,
+      info:""
     },
 
     {
       room:"Nursing Demonstration Room",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 1,
-      X: 481,
-      Y: 108,
+      X: 464.0,
+      Y: 192.0,
+      info:""
     },
     {
       room:"SHS Dean's Office ",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 1,
-      X: 437,
-      Y: 78,
+      X: 464.0,
+      Y: 96.0,
+      info:""
     },
 
     {
       room:"L21, L22, L23, L24",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 1,
-      X: 477,
-      Y: 88,
+      X: 464.0,
+      Y: 96.0,
+      info:"Classroom"
     },
 
     {
-      room:"L25 (Anatomy/Physiology Laboratory)",
-      visual: "pjpbuilding",
+      room:"L25",
+      visual: "popejohn",
       floor: 2,
-      X: 477,
-      Y: 88,
+      X: 464.0,
+      Y: 96.0,
+      info:"Anatomy/Physiology Laboratory"
     },
 
     {
       room:"L31, L32",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 2,
-      X: 477,
-      Y: 88,
+      X: 464.0,
+      Y: 96.0,
+      info:"Classrooms"
     },
 
     {
-      room:"L33 (College Audio Visual Room)",
-      visual: "pjpbuilding",
+      room:"L33",
+      visual: "popejohn",
       floor: 2,
-      X: 477,
-      Y: 88,
+      X: 464.0,
+      Y: 96.0,
+      info:"College Audio Visual Room"
     },
     {
       room:"L34, L35",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 3,
-      X: 477,
-      Y: 88,
+      X: 464.0,
+      Y: 96.0,
+      info:"Classroom"
     },
 
     {
       room:"Food and Beverage Servicing Laboratory",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 3,
-      X: 476,
-      Y: 250,
-
+      X: 464.0,
+      Y: 96.0,
+      info:""
     },
 
     {
       room:"HRM Kitchen Laboratory",
-      visual: "pjpbuilding",
+      visual: "popejohn",
       floor: 3,
-      X: 476,
-      Y: 250,
+      X: 464.0,
+      Y: 96.0,
+      info:""
     },
 
     {
-      room:"M21 (Classroom)",
+      room:"M21",
       visual: "mbuilding",
       floor: 3,
       X: 476,
       Y: 250,
+      info:"Classroom"
     },
 
     {
@@ -782,6 +882,7 @@
       floor: 4,
       X: 476,
       Y: 250,
+      info:""
     },
 
     {
@@ -790,6 +891,7 @@
       floor: 5,
       X: 476,
       Y: 250,
+      info:""
     },
 
     {
@@ -798,6 +900,7 @@
       floor: 3,
       X: 476,
       Y: 250,
+      info:""
     },
 
     {
@@ -806,6 +909,7 @@
       floor: 3,
       X: 476,
       Y: 250,
+      info:""
     },
 
     {
@@ -814,6 +918,7 @@
       floor: 3,
       X: 476,
       Y: 250,
+      info:""
     },
 
     {
@@ -822,14 +927,15 @@
       floor: 4,
       X: 476,
       Y: 250,
+      info:"Classroom"
     },
-
     {
       room:"M41, M42, M43",
       visual: "mbuilding",
       floor: 5,
       X: 476,
       Y: 250,
+      info:""
     },
     {
       room:"Function Hall",
@@ -837,14 +943,15 @@
       floor: 3,
       X: 392,
       Y: 1310,
+      info:""
     },
-
     {
       room:"SEAS Simulation Room",
       visual: "nbuilding",
       floor: 3,
       X: 392,
       Y: 1310,
+      info:""
     },
     {
       room:"College Female Faculty Room",
@@ -852,6 +959,7 @@
       floor: 3,
       X: 392,
       Y: 1310,
+      info:""
     },
     {
       room:"ECE/CpE Department Head Office",
@@ -859,14 +967,15 @@
       floor: 3,
       X: 392,
       Y: 1310,
+      info:""
     },
-
     {
       room:"College Male Faculty Room",
       visual: "nbuilding",
       floor: 3,
       X: 392,
       Y: 1310,
+      info:""
     },
     {
       room:"SBAA Simulation Room",
@@ -874,6 +983,7 @@
       floor: 1,
       X: 392,
       Y: 1310,
+      info:""
     },
     {
       room:"N31, N32, N33, N34",
@@ -881,6 +991,7 @@
       floor: 4,
       X: 392,
       Y: 1310,
+      info:"Classroom"
     },
     {
       room:"N41, N42, N43, N44",
@@ -888,46 +999,50 @@
       floor: 2,
       X: 392,
       Y: 1310,
+      info:"Classroom"
     },
-
     {
       room:"College Supreme Student Council",
-      visual: "obuilding",
+      visual: "qbuilding",
       floor: 1,
       X: 573,
       Y: 810,
+      info:""
     },
-
     {
       room:"Student Activity Center",
-      visual: "obuilding",
+      visual: "qbuilding",
       floor: 1,
       X: 573,
       Y: 810,
+      info:""
     },
 
     {
       room:"College Athletic Office",
-      visual: "uslgym",
+      visual: "gym",
       floor: 1,
       X: 163,
       Y: 525,
+      info:""
     },
 
     {
       room:"College MAPEH Room",
-      visual: "uslgym",
+      visual: "gym",
       floor: 1,
       X: 163,
       Y: 525,
+      info:""
     },
 
     {
       room:"Center for Culture and the Arts",
-      visual: "uslgym",
+      visual: "gym",
       floor: 1,
       X: 163,
       Y: 525,
+      info:""
     }
   ]
 }

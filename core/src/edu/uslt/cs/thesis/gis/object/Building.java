@@ -11,12 +11,14 @@ public class Building implements GisObject {
     private Image buildingImage;
     private String room;
     private String floor;
+    private String info;
     public int x;
     public int y;
 
-    public Building(String room, String floor, int x, int y) {
+    public Building(String room, String floor, String info, int x, int y) {
         this.floor = floor;
         this.room = room;
+        this.info = info;
         this.x = x;
         this.y = y;
     }
@@ -75,5 +77,9 @@ public class Building implements GisObject {
     @Override
     public float getHeight() {
         return buildingImage.getHeight();
+    }
+
+    public String getInfo() {
+        return info;
     }
 }

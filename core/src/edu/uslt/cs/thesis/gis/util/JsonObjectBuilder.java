@@ -26,9 +26,10 @@ public class JsonObjectBuilder {
             String room = objectTemp.getString("room");
             String imagePath = objectTemp.getString("visual");
             String floor = objectTemp.getString("floor");
+            String info = objectTemp.getString("info");
             int posX = objectTemp.getInt("X");
             int posY = objectTemp.getInt("Y");
-            Building building = new Building(room, floor, posX, posY);
+            Building building = new Building(room, floor, info, posX, posY);
             building.setImage(imagePath);
             list.add(building);
         }

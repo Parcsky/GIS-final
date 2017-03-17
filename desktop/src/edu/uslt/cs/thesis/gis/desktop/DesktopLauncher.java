@@ -11,7 +11,7 @@ public class DesktopLauncher {
         LwjglApplicationConfiguration config = new LwjglApplicationConfiguration();
         config.title = "Geographical Information System";
         config.width = 580;
-        config.height = 480;
+        config.height = 580;
         config.resizable = false;
         new LwjglApplication(new GIS(), config);
     }
