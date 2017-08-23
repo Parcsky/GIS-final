@@ -1,8 +1,10 @@
 package edu.uslt.cs.thesis.gis.screen;
 
+import com.badlogic.gdx.Screen;
+
 import edu.uslt.cs.thesis.gis.core.GIS;
 
-public abstract class State {
+public class State implements Screen {
 
     public GIS gis;
 
@@ -10,11 +12,41 @@ public abstract class State {
         this.gis = gis;
     }
 
-    public abstract void update();
 
-    public abstract void render();
+    @Override
+    public void show() {
 
-    public abstract void resize(int width, int height);
+    }
 
-    public abstract void dispose();
+    @Override
+    public void render(float delta) {
+
+    }
+
+    @Override
+    public void resize(int width, int height) {
+
+    }
+
+
+    @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public void resume() {
+
+    }
+
+    @Override
+    public void hide() {
+
+    }
+
+    @Override
+    public void dispose() {
+
+    }
+
 }

@@ -2,82 +2,86 @@ package edu.uslt.cs.thesis.gis.screen;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.OrthographicCamera;
-import com.badlogic.gdx.utils.viewport.FillViewport;
 
-import edu.uslt.cs.thesis.gis.control.GisListener;
-import edu.uslt.cs.thesis.gis.control.HudListener;
 import edu.uslt.cs.thesis.gis.control.TerrainOptionListener;
 import edu.uslt.cs.thesis.gis.core.GIS;
 import edu.uslt.cs.thesis.gis.gui.HUD;
-import edu.uslt.cs.thesis.gis.map.SaintLouisMap;
+import edu.uslt.cs.thesis.gis.map.GisMap;
 import edu.uslt.cs.thesis.gis.map.TiledMapStage;
 
-public class MainState extends State {
-
+public class MainState implements Screen {
     private TiledMapStage mapStage;
-    private HUD hud;
+    private HUD HUD;
+    private GisMap gisMap;
 
     public MainState(GIS gis) {
-        super(gis);
+        HUD = gis.HUD;
         mapStage = gis.getMapStage();
-        SaintLouisMap uslMap = gis.getUslMap();
+        gisMap = gis.getGisMap();
 
-        hud = new HUD(gis.hudSkin, gis.width, gis.height);
-        hud.addListener(new HudListener(gis, hud));
-        hud.display();
+        mapStage.addListener(gis.getGisListener());
 
-        OrthographicCamera camera = new OrthographicCamera();
-        camera.setToOrtho(false, gis.width, gis.height);
-        camera.update();
+        TerrainOptionListener terrainListener = new TerrainOptionListener(gisMap, HUD.getTerrainPanel());
+        HUD.getTerrainPanel().addListener(terrainListener);
 
-        TerrainOptionListener terrainListener = new TerrainOptionListener(gis, hud.getTerrainPanel());
-        hud.getTerrainPanel().addListener(terrainListener);
-
-        mapStage.setViewport(new FillViewport(gis.width, gis.height, camera));
-        mapStage.addListener( new GisListener(gis, hud));
-        mapStage.addActor(gis.getMarker().getObject());
         mapStage.getStage().getViewport().update(gis.width, gis.height);
-        uslMap.setCam(mapStage.getCamera());
 
         InputMultiplexer inputMultiplexer = new InputMultiplexer();
-        inputMultiplexer.addProcessor(hud.getStage());
+        inputMultiplexer.addProcessor(HUD.getStage());
         inputMultiplexer.addProcessor(mapStage.getStage());
         Gdx.input.setInputProcessor(inputMultiplexer);
     }
 
     @Override
-    public void update() {
-        mapStage.act();
-        hud.act();
+    public void show() {
+
     }
 
     @Override
-    public void render() {
-        Gdx.gl.glClearColor(1f,1f,1f,1f);
+    public void render(float delta) {
+        Gdx.gl.glClearColor(.5f, .5f, .5f, .5f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        mapStage.act();
+        HUD.act();
 
-        gis.getUslMap().render();
+        gisMap.render();
 
         mapStage.getViewport().apply();
         mapStage.draw();
 
-        hud.getStage().getViewport().apply();
-        hud.draw();
+        HUD.getStage().getViewport().apply();
+        HUD.draw();
     }
 
     @Override
     public void resize(int width, int height) {
-        hud.resize(width, height);
         mapStage.resize(width, height);
+        HUD.resize(width, height);
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public void resume() {
+
+    }
+
+    @Override
+    public void hide() {
+
     }
 
     @Override
     public void dispose() {
-        gis.getUslMap().dispose();
-        hud.dispose();
+        gisMap.dispose();
         mapStage.dispose();
+        HUD.dispose();
+
     }
 }
 

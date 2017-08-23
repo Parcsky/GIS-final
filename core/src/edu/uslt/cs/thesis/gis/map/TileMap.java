@@ -2,7 +2,11 @@ package edu.uslt.cs.thesis.gis.map;
 
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.OrthographicCamera;
+import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
+import com.badlogic.gdx.maps.tiled.TiledMapTileSets;
 
 import edu.uslt.cs.thesis.gis.algorithm.Node;
 
@@ -12,7 +16,7 @@ public interface TileMap {
 
     boolean isValidLocation(int dx, int dy);
 
-    boolean isWalkable(Node node, int x, int y);
+    boolean isWalkable(Node node);
 
     int getTileWidth();
 
@@ -26,7 +30,11 @@ public interface TileMap {
 
     float getHeight();
 
-    void setCamView(OrthographicCamera mapCam, float tileWidth, float tileHeight);
+    TiledMapTileSet getTileSet(String name);
+
+    TiledMapTileSets getTileSets();
+
+    TiledMap getTiledMap();
 
     void render();
 
@@ -35,4 +43,6 @@ public interface TileMap {
     OrthographicCamera getCam();
 
     void setCam(Camera camera);
+
+    TiledMapTile getTile(int id);
 }

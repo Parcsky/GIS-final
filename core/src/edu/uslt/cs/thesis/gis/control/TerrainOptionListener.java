@@ -4,17 +4,17 @@ import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.CheckBox;
 import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 
-import edu.uslt.cs.thesis.gis.core.GIS;
-import edu.uslt.cs.thesis.gis.gui.TerrainPanel;
+import edu.uslt.cs.thesis.gis.gui.panels.TerrainPanel;
+import edu.uslt.cs.thesis.gis.map.GisMap;
 
 public class TerrainOptionListener extends ChangeListener {
 
     private TerrainPanel terrainPanel;
-    private GIS GIS;
+    private GisMap gisMap;
 
-    public TerrainOptionListener(GIS GIS, TerrainPanel terrainPanel) {
+    public TerrainOptionListener(GisMap gisMap, TerrainPanel terrainPanel) {
         this.terrainPanel = terrainPanel;
-        this.GIS = GIS;
+        this.gisMap = gisMap;
     }
 
     @Override
@@ -22,9 +22,9 @@ public class TerrainOptionListener extends ChangeListener {
         CheckBox checkBox = terrainPanel.getChildren(actor.getName());
         if (actor.equals(checkBox)) {
             if (checkBox.isChecked()) {
-                GIS.uslMap.setLayerVisible(actor.getName(), false);
+                gisMap.setLayerVisible(actor.getName(), false);
             } else if (!checkBox.isChecked()) {
-                GIS.uslMap.setLayerVisible(actor.getName(), true);
+                gisMap.setLayerVisible(actor.getName(), true);
             }
         }
     }

@@ -6,13 +6,16 @@ import com.badlogic.gdx.maps.MapLayers;
 import com.badlogic.gdx.maps.MapProperties;
 import com.badlogic.gdx.maps.tiled.TiledMap;
 import com.badlogic.gdx.maps.tiled.TiledMapRenderer;
+import com.badlogic.gdx.maps.tiled.TiledMapTile;
 import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.maps.tiled.TiledMapTileSet;
+import com.badlogic.gdx.maps.tiled.TiledMapTileSets;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
 
 import edu.uslt.cs.thesis.gis.algorithm.Node;
 import edu.uslt.cs.thesis.gis.resource.Assets;
 
-public class SaintLouisMap implements TileMap {
+public class GisMap implements TileMap {
 
     private TiledMapRenderer mapRenderer;
     private MapProperties mapProperties;
@@ -20,21 +23,12 @@ public class SaintLouisMap implements TileMap {
     private MapLayers mapLayers;
     private TiledMap tiledMap;
 
-    public SaintLouisMap(String path) {
+    public GisMap(String path) {
         if (path.length() <= 0) throw new IllegalStateException(path + "is < 0");
         tiledMap = Assets.instance().get(path);
-
         mapLayers = tiledMap.getLayers();
         mapRenderer = new OrthogonalTiledMapRenderer(tiledMap);
         mapProperties = tiledMap.getProperties();
-    }
-
-    @Override
-    public void setCamView(OrthographicCamera camera, float width, float height) {
-        this.camera = camera;
-        if (camera == null) throw new NullPointerException("Camera is null");
-        camera.setToOrtho(false, width, height);
-        camera.update();
     }
 
     @Override
@@ -49,8 +43,8 @@ public class SaintLouisMap implements TileMap {
     }
 
     @Override
-    public boolean isWalkable(Node node, int x, int y) {
-        return node.cell != null || x == 0 && y == 0;
+    public boolean isWalkable(Node node) {
+        return node.cell.getTile().getId() == 1;
     }
 
     @Override
@@ -102,8 +96,27 @@ public class SaintLouisMap implements TileMap {
         this.camera = (OrthographicCamera) camera;
     }
 
+    @Override
+    public TiledMapTile getTile(int id) {
+        return tiledMap.getTileSets().getTile(id);
+    }
+
     public void setLayerVisible(String layerName, boolean visible) {
         mapLayers.get(layerName).setVisible(visible);
     }
 
+    @Override
+    public TiledMapTileSet getTileSet(String name) {
+        return tiledMap.getTileSets().getTileSet(name);
+    }
+
+    @Override
+    public TiledMapTileSets getTileSets() {
+        return tiledMap.getTileSets();
+    }
+
+    @Override
+    public TiledMap getTiledMap() {
+        return tiledMap;
+    }
 }

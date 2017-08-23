@@ -42,11 +42,12 @@ public class Assets {
         manager.load("data/hud.json", Skin.class, new SkinLoader.SkinParameter("hud/gis.atlas"));
         manager.load("object/building.pack", TextureAtlas.class);
         manager.load("font/molten.ttf", BitmapFont.class, moltenLoader);
-        manager.load("map/usl-map.tmx", TiledMap.class);
+        manager.load("map/edit-map.tmx", TiledMap.class);
 
         manager.finishLoading();
 
         buildingAtlas = get("object/building.pack");
+
         skin = manager.get("data/hud.json");
         splashAsset = new SplashAsset(skin);
     }

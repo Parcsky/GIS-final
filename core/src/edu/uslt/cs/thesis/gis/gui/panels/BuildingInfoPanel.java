@@ -1,4 +1,4 @@
-package edu.uslt.cs.thesis.gis.gui;
+package edu.uslt.cs.thesis.gis.gui.panels;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Container;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -9,7 +9,7 @@ import com.badlogic.gdx.utils.Align;
 
 import edu.uslt.cs.thesis.gis.util.constant.Option;
 
-public class BuildingInfoPanel implements Panel {
+public class BuildingInfoPanel implements edu.uslt.cs.thesis.gis.gui.Panel {
 
     public Container<Image> container;
     private Table infoTable;
@@ -19,7 +19,7 @@ public class BuildingInfoPanel implements Panel {
     public Label floor;
 
 
-    BuildingInfoPanel(Skin skin, int width, int height) {
+    public BuildingInfoPanel(Skin skin, int width, int height) {
         buildingName = new Label("Building name", skin, "default");
         buildingName.setWrap(true);
         buildingInfo = new Label("", skin, "default");

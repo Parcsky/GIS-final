@@ -1,4 +1,4 @@
-package edu.uslt.cs.thesis.gis.gui;
+package edu.uslt.cs.thesis.gis.gui.panels;
 
 import com.badlogic.gdx.scenes.scene2d.ui.CheckBox;
 import com.badlogic.gdx.scenes.scene2d.ui.Label;
@@ -11,7 +11,7 @@ import com.badlogic.gdx.utils.Scaling;
 import edu.uslt.cs.thesis.gis.control.TerrainOptionListener;
 import edu.uslt.cs.thesis.gis.util.constant.Option;
 
-public class TerrainPanel implements Panel {
+public class TerrainPanel implements edu.uslt.cs.thesis.gis.gui.Panel {
 
     private Table table;
     public CheckBox building;

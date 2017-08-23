@@ -8,6 +8,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Stack;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.utils.viewport.FillViewport;
 
+import edu.uslt.cs.thesis.gis.gui.panels.BuildingInfoPanel;
+import edu.uslt.cs.thesis.gis.gui.panels.MenuPanel;
+import edu.uslt.cs.thesis.gis.gui.panels.NavigationPanel;
+import edu.uslt.cs.thesis.gis.gui.panels.ScrollPanel;
+import edu.uslt.cs.thesis.gis.gui.panels.TerrainPanel;
+import edu.uslt.cs.thesis.gis.gui.panels.ZoomPanel;
+
 
 public class HUD implements HudInterface {
 
@@ -31,7 +38,10 @@ public class HUD implements HudInterface {
         scrollPanel = new ScrollPanel(skin, "default");
         scrollPanel.vScrollSize(15, 15);
         scrollPanel.vKnobSize(5, 5);
-        menuPanel = new MenuPanel(skin);
+
+        String[][] buttonName = {{"Building Info", "Terrain Info", "Quit"}, {"default", "setting-btn", "exit-btn"}};
+
+        menuPanel = new MenuPanel(skin, buttonName);
 
         Stack stack = new Stack();
         stack.setName("stack");

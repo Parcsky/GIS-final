@@ -1,6 +1,7 @@
 package edu.uslt.cs.thesis.gis.screen;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
@@ -10,12 +11,13 @@ import edu.uslt.cs.thesis.gis.core.GIS;
 import edu.uslt.cs.thesis.gis.core.Splash;
 import edu.uslt.cs.thesis.gis.resource.Assets;
 
-public class SplashState extends State implements Runnable {
+public class SplashState implements Runnable, Screen {
 
     private Stage stage;
+    private GIS gis;
 
     public SplashState(final GIS gis) {
-        super(gis);
+        this.gis = gis;
         Image uslBanner = Assets.instance().getSplash().uslBanner;
         Image uslLogo = Assets.instance().getSplash().uslLogo;
 
@@ -34,15 +36,17 @@ public class SplashState extends State implements Runnable {
         stage.addActor(bannerSplash.getImage());
     }
 
+
     @Override
-    public void update() {
-        stage.act();
+    public void show() {
+
     }
 
     @Override
-    public void render() {
+    public void render(float delta) {
         Gdx.gl.glClearColor(1f, 1f, 1f, 1f);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        stage.act();
         stage.draw();
     }
 
@@ -52,12 +56,27 @@ public class SplashState extends State implements Runnable {
     }
 
     @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public void resume() {
+
+    }
+
+    @Override
+    public void hide() {
+
+    }
+
+    @Override
     public void dispose() {
         stage.dispose();
     }
 
     @Override
     public void run() {
-        gis.stateManager().add(new MainState(gis));
+        gis.setScreen(new LogInState(gis));
     }
 }

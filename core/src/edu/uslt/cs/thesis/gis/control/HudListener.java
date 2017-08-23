@@ -11,8 +11,9 @@ import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 
 import edu.uslt.cs.thesis.gis.core.GIS;
 import edu.uslt.cs.thesis.gis.gui.HUD;
-import edu.uslt.cs.thesis.gis.gui.MenuPanel;
+import edu.uslt.cs.thesis.gis.gui.panels.MenuPanel;
 import edu.uslt.cs.thesis.gis.manager.BuildingManager;
+import edu.uslt.cs.thesis.gis.screen.LogInState;
 
 public class HudListener extends ClickListener {
 
@@ -23,18 +24,21 @@ public class HudListener extends ClickListener {
     private Button menuList;
     private HUD hud;
     private MenuPanel menuPanel;
-
-
-    private final int TAPCOUNT_MAX = 3;
+    private ImageTextButton btnAdmin;
+    private GIS gis;
 
     public HudListener(GIS gis, HUD hud) {
         this.hud = hud;
+        this.gis = gis;
         this.scrollPane = hud.getScrollPanel().getTable();
         this.menuList = hud.getNavigationPanel().menuList;
         this.search = hud.getNavigationPanel().search;
         this.buildingManager = gis.buildingManager;
         this.menuPanel = hud.getMenuPanel();
-        this.list = hud.getScrollPanel().list;
+        this.list = gis.getList();
+        this.btnAdmin = hud.getNavigationPanel().btnAdmin;
+        list.setItems(gis.buildingManager.getBuildingName());
+        scrollPane.setWidget(list);
     }
 
     @Override
@@ -42,9 +46,13 @@ public class HudListener extends ClickListener {
         if (event.getTarget().equals(list)) {
             return super.touchDown(event, x, y, pointer, button);
         }
+        if (event.getTarget().equals(btnAdmin)) {
+            gis.setScreen(new LogInState(gis));
+        }
         if (event.getTarget().equals(menuList)) {
             if (!menuList.isChecked()) hud.getMenuPanel().show();
             else if (menuList.isChecked()) hud.getMenuPanel().hide();
+
         }
         menuController(event);
         return false;
@@ -72,6 +80,7 @@ public class HudListener extends ClickListener {
             }
         }
     }
+
     @Override
     public boolean keyTyped(InputEvent event, char character) {
         buildingManager.clearList();

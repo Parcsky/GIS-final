@@ -1,30 +1,29 @@
-package edu.uslt.cs.thesis.gis.gui;
+package edu.uslt.cs.thesis.gis.gui.panels;
 
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.ui.ImageTextButton;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 
+import edu.uslt.cs.thesis.gis.gui.Panel;
 import edu.uslt.cs.thesis.gis.util.constant.Option;
 
 public class MenuPanel implements Panel {
 
     private Table menuTable;
 
-    public MenuPanel(Skin skin) {
+    public MenuPanel(Skin skin, String[][] buttonName) {
         menuTable = new Table(skin);
         menuTable.setBackground("container");
         menuTable.setVisible(false);
         menuTable.pad(5);
         setName(Option.MENU_OPTION);
 
-        String[][] buttonText = {{"Building Info", "Terrain Info", "Quit"}, {"default", "setting-btn", "exit-btn"}};
-
-        for (int i = 0; i < buttonText[0].length; i++) {
-            ImageTextButton imageTextButton = new ImageTextButton(buttonText[0][i], skin, buttonText[1][i]);
+        for (int i = 0; i < buttonName[0].length; i++) {
+            ImageTextButton imageTextButton = new ImageTextButton(buttonName[0][i], skin, buttonName[1][i]);
             imageTextButton.setChecked(false);
             imageTextButton.getLabelCell().minSize(0).prefSize(0);
-            imageTextButton.setName(buttonText[0][i]);
+            imageTextButton.setName(buttonName[0][i]);
             menuTable.add(imageTextButton).minSize(0, 0).pad(1).row();
         }
     }
@@ -34,6 +33,10 @@ public class MenuPanel implements Panel {
             return actor;
         }
         return null;
+    }
+
+    public Actor getChildren(int id) {
+        return menuTable.getChildren().get(id);
     }
 
     @Override

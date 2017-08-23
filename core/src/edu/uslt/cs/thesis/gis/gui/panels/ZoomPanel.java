@@ -1,4 +1,4 @@
-package edu.uslt.cs.thesis.gis.gui;
+package edu.uslt.cs.thesis.gis.gui.panels;
 
 import com.badlogic.gdx.scenes.scene2d.ui.Button;
 import com.badlogic.gdx.scenes.scene2d.ui.Skin;
@@ -7,7 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import edu.uslt.cs.thesis.gis.util.constant.Option;
 
 
-public class ZoomPanel implements Panel {
+public class ZoomPanel implements edu.uslt.cs.thesis.gis.gui.Panel {
 
     private Table table;
     public Button zoomIn;

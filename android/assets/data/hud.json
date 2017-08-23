@@ -50,6 +50,12 @@
     font: myriad-pro,
     fontColor: white
   },
+  default-other:
+  {
+    font: myriad-pro,
+    fontColor: white
+  },
+
 },
   com.badlogic.gdx.scenes.scene2d.ui.TextField$TextFieldStyle:
 {
@@ -61,7 +67,7 @@
     cursor: cursor
   },
   search-little: {
-    background: search-little,
+    background: input-active,
     font: myriad-pro,
     fontColor: white,
     selection: input-error,
@@ -99,7 +105,7 @@
 
   default:{
         font: myriad-pro,
-        up: help-btn,
+        up: show-btn,
         down: highlighter,
         pressedOffsetX: -2,
         pressedOffsetY: -2

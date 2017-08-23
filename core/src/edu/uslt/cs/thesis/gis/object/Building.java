@@ -1,85 +1,59 @@
 package edu.uslt.cs.thesis.gis.object;
 
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import com.badlogic.gdx.scenes.scene2d.ui.Image;
+public class Building {
 
-import edu.uslt.cs.thesis.gis.resource.Assets;
-
-public class Building implements GisObject {
-
-    private Image buildingImage;
+    // private Image buildingImage;
     private String room;
     private String floor;
     private String info;
-    public int x;
-    public int y;
+    private int x;
+    private int y;
 
-    public Building(String room, String floor, String info, int x, int y) {
-        this.floor = floor;
+//
+//    @Override
+//    public void setImage(String imageName) {
+//        TextureAtlas atlas = Assets.instance().getBuildingAtlas();
+//        TextureRegion region = atlas.findRegion(imageName);
+//        buildingImage = new Image(region);
+//    }
+
+    public void setRoom(String room) {
         this.room = room;
+    }
+
+    public void setFloor(String floor) {
+        this.floor = floor;
+    }
+
+    public void setInfo(String info) {
         this.info = info;
+    }
+
+    public void setX(int x) {
         this.x = x;
+    }
+
+    public void setY(int y) {
         this.y = y;
-    }
-
-    @Override
-    public void setImage(String imageName) {
-        TextureAtlas atlas = Assets.instance().getBuildingAtlas();
-        TextureRegion region = atlas.findRegion(imageName);
-        buildingImage = new Image(region);
-    }
-
-    @Override
-    public void setPosition(float x, float y) {
-
     }
 
     public String getFloor() {
         return floor;
     }
 
-    @Override
+    public String getInfo() {
+        return info;
+    }
+
     public String getName() {
         return room;
     }
 
-    @Override
-    public Image getObject() {
-        return buildingImage;
-    }
-
-    @Override
-    public void setVisible(boolean visible) {
-
-    }
-
-    @Override
-    public void setBounds(float x, float y, float width, float height) {
-
-    }
-
-    @Override
-    public float getX() {
+    public int getX() {
         return x;
     }
 
-    @Override
-    public float getY() {
+    public int getY() {
         return y;
-    }
-
-    @Override
-    public float getWidth() {
-        return buildingImage.getWidth();
-    }
-
-    @Override
-    public float getHeight() {
-        return buildingImage.getHeight();
-    }
-
-    public String getInfo() {
-        return info;
     }
 }

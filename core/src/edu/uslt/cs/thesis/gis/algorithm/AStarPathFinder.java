@@ -58,21 +58,23 @@ public class AStarPathFinder implements PathFinder {
                     int dy = current.y + y;
 
                     if (map.isValidLocation(dx, dy)) {
-                        if (!map.isWalkable(nodes[dx][dy], x, y) || close.contains(nodes[dx][dy]))
+                        if (x == 0 && y == 0 || close.contains(nodes[dx][dy])) {
                             continue;
+                        }
+                        if (map.isWalkable(nodes[dx][dy])) {
+                            float newScore = movementCost(current.g, isDiagonal(x, y));
 
-                        float newScore = movementCost(current.g, isDiagonal(x, y));
+                            if (!open.contains(nodes[dx][dy])) {
+                                open.add(nodes[dx][dy]);
+                            } else if (newScore >= nodes[dx][dy].g) continue;
 
-                        if (!open.contains(nodes[dx][dy])) {
-                            open.add(nodes[dx][dy]);
-                        } else if (newScore >= nodes[dx][dy].g) continue;
-
-                        if (open.contains(nodes[dx][dy]) || newScore < nodes[dx][dy].g) {
-                            setDirection(nodes[dx][dy], x, y);
-                            nodes[dx][dy].g = newScore;
-                            nodes[dx][dy].h = heuristic.estimate(nodes[dx][dy], goal);
-                            nodes[dx][dy].f = nodes[dx][dy].g + nodes[dx][dy].h;
-                            nodes[dx][dy].parent = current;
+                            if (open.contains(nodes[dx][dy]) || newScore < nodes[dx][dy].g) {
+                                setDirection(nodes[dx][dy], x, y);
+                                nodes[dx][dy].g = newScore;
+                                nodes[dx][dy].h = heuristic.estimate(nodes[dx][dy], goal);
+                                nodes[dx][dy].f = nodes[dx][dy].g + nodes[dx][dy].h;
+                                nodes[dx][dy].parent = current;
+                            }
                         }
                     }
                 }
@@ -111,17 +113,18 @@ public class AStarPathFinder implements PathFinder {
 
     @Override
     public void clearNodes() {
-        for (int i = 0; i < map.getTileWidth(); i++) {
-            for (int j = 0; j < map.getTileHeight(); j++) {
+        for (int i = 0; i < nodes.length; i++)
+            for (int j = 0; j < nodes[0].length; j++) {
+
                 if (nodes[i][j].cell != null) {
                     nodes[i][j].f = 0;
                     nodes[i][j].h = 0;
                     nodes[i][j].g = 0;
                     nodes[i][j].arrow.setVisible(false);
                     nodes[i][j].parent = null;
+                    nodes[i][j].setDebugMode(false);
                 }
             }
-        }
         close.clear();
         open.clear();
     }

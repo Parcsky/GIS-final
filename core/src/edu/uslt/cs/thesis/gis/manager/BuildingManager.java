@@ -50,7 +50,6 @@ public class BuildingManager {
         return null;
     }
 
-
     public List<Building> getBuildings() {
         return buildings;
     }

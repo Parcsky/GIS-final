@@ -1,0 +1,14 @@
+{
+  buildings:
+  [
+    {
+      room:"University of Saint Louis",
+      visual: "entrance",
+      floor: 0,
+      X: 848,
+      Y: 1280,
+      info:"UNIVERSITY OF SAINT LOUIS is one of the five CICM institutions of higher learning which aim at preparing the youth in becoming mature Christians and citizens whose only pride will be to serve well their God and Country."
+    },
+
+    }
+
