@@ -3,7 +3,7 @@ GPS offline implemented with A* algorithm for tracking the desired destination f
 
 
 <p align="center">
- <a href="https://www.youtube.com/watch?v=F7dZvOh-0Fw"><img src="https://github.com/Sparcsky/location-finder/blob/master/Capture.PNG"/></a>
+ <a href="https://www.youtube.com/watch?v=F7dZvOh-0Fw"><img src="https://github.com/Sparcsky/location-finder/blob/master/Capture.PNG" alt ="CLICK ME!"/></a>
 
 
 
