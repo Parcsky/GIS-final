@@ -14,7 +14,6 @@ GPS offline implemented with A* algorithm for tracking the desired destination f
 </p>
 
 <p align="center">
-  <img src="https://github.com/Sparcsky/location-finder/blob/master/2.png"/>
+ <a href="https://www.youtube.com/watch?v=F7dZvOh-0Fw"><img src="https://github.com/Sparcsky/location-finder/blob/master/2.png"/></a>
 </p>
 
-[![Everything Is AWESOME](https://github.com/Sparcsky/location-finder/blob/master/2.png)](https://www.youtube.com/watch?v=F7dZvOh-0Fw"Everything Is AWESOME")
