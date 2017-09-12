@@ -19,6 +19,11 @@ GPS offline implemented with A* algorithm for tracking the desired destination f
   <img src="https://github.com/Sparcsky/location-finder/blob/master/3.png"/>
 </p>
 
+<p align="center">
+  <img src="https://github.com/Sparcsky/location-finder/blob/master/2.png"/>
+</p>
+
+
 
 </p>
 
