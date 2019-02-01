@@ -1,8 +1,10 @@
 # location-finder
-GPS offline implemented with A* algorithm for tracking the desired destination from the specified starting point. 
+GPS offline implemented with A* algorithm to track desired destination from point A to point B. 
 
-
+Feature:
 Allow admin to create a 2D map using different Tiles
+Create building tiles
+
 <p align="center">
  <a href="https://www.youtube.com/watch?v=F7dZvOh-0Fw"><img src="https://github.com/Sparcsky/location-finder/blob/master/Capture.PNG" alt ="CLICK ME!"/></a>
 
